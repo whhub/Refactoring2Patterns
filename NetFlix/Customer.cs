@@ -27,15 +27,13 @@ namespace NetFlix
 
             foreach (var rental in _rentals)
             {
-                var thisAmount = rental.GetCharge();
-
                 // add frequent renter points (累计常客积点）
                 frequentRenterPoints += rental.GetFrequentRenterPoints();
 
                 // show figures for this rental (显示此笔租借记录）
-                result += "\t" + rental.Movie.Title + "\t" + thisAmount + "\n";
+                result += "\t" + rental.Movie.Title + "\t" + rental.GetCharge() + "\n";
 
-                totalAmount += thisAmount;
+                totalAmount += rental.GetCharge();
             }
 
             // add footer lines (结尾打印）
