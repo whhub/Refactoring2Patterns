@@ -35,5 +35,11 @@
             }
             return thisAmount;
         }
+
+        public int GetFrequentRenterPoints(int daysRented)
+        {
+            if (PriceCode == NewRelease && daysRented > 1) return 2;
+            return 1;
+        }
     }
 }
