@@ -30,14 +30,10 @@ namespace NetFlix
                 var thisAmount = rental.GetCharge();
 
                 // add frequent renter points (累计常客积点）
-                frequentRenterPoints ++;
-
-                // add bonus for a two day new release rental
-                if (rental.Movie.PriceCode == Movie.NewRelease && rental.DaysRented > 1)
-                    frequentRenterPoints++;
+                frequentRenterPoints += rental.GetFrequentRenterPoints();
 
                 // show figures for this rental (显示此笔租借记录）
-                result += "\t" + rental.Movie.Title + "\t" + totalAmount + "\n";
+                result += "\t" + rental.Movie.Title + "\t" + thisAmount + "\n";
 
                 totalAmount += thisAmount;
             }

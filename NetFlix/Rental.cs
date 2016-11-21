@@ -31,5 +31,13 @@
             }
             return thisAmount;
         }
+
+        public int GetFrequentRenterPoints()
+        {
+            // add bonus for a two day new release rental
+            if (Movie.PriceCode == Movie.NewRelease && DaysRented > 1)
+                return 2;
+            return 1;
+        }
     }
 }
