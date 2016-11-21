@@ -38,7 +38,7 @@ namespace NetFlix
 
         public string HtmlStatement()
         {
-            var result = "<H1>Rentals for <EM>" + getName() + "</EM></ H1><P>\n";
+            var result = "<H1>Rentals for <EM>" + Name + "</EM></ H1><P>\n";
 
             foreach (var rental in _rentals)
             {
