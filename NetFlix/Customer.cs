@@ -27,7 +27,7 @@ namespace NetFlix
 
             foreach (var rental in _rentals)
             {
-                var thisAmount = AmountFor(rental);
+                var thisAmount = rental.GetCharge();
 
                 // add frequent renter points (累计常客积点）
                 frequentRenterPoints ++;
@@ -47,27 +47,6 @@ namespace NetFlix
             result += "You earned " + frequentRenterPoints + " frequent renter points";
 
             return result;
-        }
-
-        private double AmountFor(Rental rental)
-        {
-            double thisAmount = 0;
-
-            switch (rental.Movie.PriceCode)
-            {
-                case Movie.Regular:
-                    thisAmount += 2;
-                    if (rental.DaysRented > 2) thisAmount += (rental.DaysRented - 2)*1.5;
-                    break;
-                case Movie.NewRelease:
-                    thisAmount += rental.DaysRented*3;
-                    break;
-                case Movie.Childrens:
-                    thisAmount += 1.5;
-                    if (rental.DaysRented > 3) thisAmount += (rental.DaysRented - 3)*1.5;
-                    break;
-            }
-            return thisAmount;
         }
     }
 }
