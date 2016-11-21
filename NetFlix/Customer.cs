@@ -31,12 +31,31 @@ namespace NetFlix
 
             // add footer lines (结尾打印）
             result += "Amount owed is " + GetTotalCharge() + "\n";
-            result += "You earned " + GetFrequentRenterPoints() + " frequent renter points";
+            result += "You earned " + GetTotalFrequentRenterPoints() + " frequent renter points";
 
             return result;
         }
 
-        private int GetFrequentRenterPoints()
+        public string HtmlStatement()
+        {
+            var result = "<H1>Rentals for <EM>" + getName() + "</EM></ H1><P>\n";
+
+            foreach (var rental in _rentals)
+            {
+                result += rental.Movie.Title + ": " + rental.GetCharge() + "<BR>\n";
+            }
+
+            // add footer lines
+            result += "<P>You owe <EM>" + GetTotalCharge() + "</EM><P>\n";
+
+            result += "On this rental you earned <EM>" +
+                      GetTotalFrequentRenterPoints() +
+                      "</EM> frequent renter points<P>";
+
+            return result;
+        }
+
+        private int GetTotalFrequentRenterPoints()
         {
             var frequentRenterPoints = 0; // 常客积点
             foreach (var rental in _rentals)
