@@ -1,15 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ObjectStructure
 {
     internal class Page : ISelect
     {
-        private Layout _layout;
+        public IEnumerable<Cell> Cells { get; private set; }
+
+        public Page(Layout layout, IEnumerable<Cell> cells)
+        {
+            Layout = layout;
+            Cells = cells;
+        }
 
         public bool IsSelected
         {
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
         }
+
+        public Layout Layout { get; set; }
     }
 }

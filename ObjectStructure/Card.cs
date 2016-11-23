@@ -6,17 +6,32 @@ namespace ObjectStructure
 {
     internal class Card
     {
+        private IEnumerable<Cell> _cells = new List<Cell>();
         private bool _ifRepack;
-        private readonly IList<Segment> _segments = new List<Segment>();
+        private IEnumerable<Page> _pages = new List<Page>();
+        private readonly List<Segment> _segments = new List<Segment>();
 
         public void AddPage()
         {
-            //var lastSegment = _segments.LastOrDefault();
-            //Page lastPage;
-            //if (lastSegment != null)
-            //    lastPage = lastSegment.
-            //        var
-            //segment = new Segment(layout, cells);
+            var layout = GetNewPageLayout();
+
+            _segments.Add(new Segment(layout));
+
+            RebuildLink();
+        }
+
+        private void RebuildLink()
+        {
+            _pages = _segments.SelectMany(s => s.Pages);
+            _cells = _pages.SelectMany(p => p.Cells);
+
+            BuildBoard();
+        }
+
+        private Layout GetNewPageLayout()
+        {
+            var lastPage = _pages.LastOrDefault();
+            return lastPage == null ? LayoutFactory.Instance.DefaultLayout() : lastPage.Layout;
         }
 
         public void InsertCells(IEnumerable<Cell> cells, int pageIndex, int cellIndex)
@@ -27,17 +42,16 @@ namespace ObjectStructure
         {
         }
 
-        public void BuildSegments()
-        {
-        }
-
         public Board BuildBoard()
         {
             throw new NotImplementedException();
         }
 
-        public void BuildPages()
+        public void Repack()
         {
+            _segments.ForEach(s => s.Repack());
+
+            RebuildLink();
         }
     }
 }
