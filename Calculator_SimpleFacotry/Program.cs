@@ -7,23 +7,39 @@ namespace Calculator_SimpleFacotry
         private static void Main(string[] args)
         {
             Console.WriteLine("请输入数字A：");
-            var A = Console.ReadLine();
+            var strNumberA = Console.ReadLine();
             Console.WriteLine("请输入运算符号（+、-、*、/）：");
-            var B = Console.ReadLine();
+            var strOperate = Console.ReadLine();
             Console.WriteLine("请输入数字B：");
-            var C = Console.ReadLine();
-            var D = "";
+            var strNumberB = Console.ReadLine();
+            var strResult = "";
 
-            if (B == "+")
-                D = Convert.ToString(Convert.ToDouble(A) + Convert.ToDouble(C));
-            if (B == "-")
-                D = Convert.ToString(Convert.ToDouble(A) - Convert.ToDouble(C));
-            if (B == "*")
-                D = Convert.ToString(Convert.ToDouble(A)*Convert.ToDouble(C));
-            if (B == "/")
-                D = Convert.ToString(Convert.ToDouble(A)/Convert.ToDouble(C));
-
-            Console.WriteLine("结果是：" + D);
+            try
+            {
+                switch (strOperate)
+                {
+                    case "+":
+                        strResult = Convert.ToString(Convert.ToDouble(strNumberA) + Convert.ToDouble(strNumberB));
+                        break;
+                    case "-":
+                        strResult = Convert.ToString(Convert.ToDouble(strNumberA) - Convert.ToDouble(strNumberB));
+                        break;
+                    case "*":
+                        strResult = Convert.ToString(Convert.ToDouble(strNumberA)*Convert.ToDouble(strNumberB));
+                        break;
+                    case "/":
+                        if (strNumberB != "0")
+                            strResult = Convert.ToString(Convert.ToDouble(strNumberA)/Convert.ToDouble(strNumberB));
+                        else
+                            strResult = "除数不能为零";
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("您的输入有错：" + e.Message);
+            }
+            Console.WriteLine("结果是：" + strResult);
         }
     }
 }
