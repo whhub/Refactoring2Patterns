@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFlix", "NetFlix\NetFlix.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectStructure", "ObjectStructure\ObjectStructure.csproj", "{29A8374D-B6D6-4FC3-8F99-2480A69388F4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Talk About Design Patterns", "Talk About Design Patterns", "{DD0A721E-E759-40BA-A5CF-7E327ED62753}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator_SimpleFacotry", "Calculator_SimpleFacotry\Calculator_SimpleFacotry.csproj", "{E18C10FF-4CDC-4496-AAE8-2B892902BF26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,8 +23,15 @@ Global
 		{29A8374D-B6D6-4FC3-8F99-2480A69388F4}.Debug|x86.Build.0 = Debug|x86
 		{29A8374D-B6D6-4FC3-8F99-2480A69388F4}.Release|x86.ActiveCfg = Release|x86
 		{29A8374D-B6D6-4FC3-8F99-2480A69388F4}.Release|x86.Build.0 = Release|x86
+		{E18C10FF-4CDC-4496-AAE8-2B892902BF26}.Debug|x86.ActiveCfg = Debug|x86
+		{E18C10FF-4CDC-4496-AAE8-2B892902BF26}.Debug|x86.Build.0 = Debug|x86
+		{E18C10FF-4CDC-4496-AAE8-2B892902BF26}.Release|x86.ActiveCfg = Release|x86
+		{E18C10FF-4CDC-4496-AAE8-2B892902BF26}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E18C10FF-4CDC-4496-AAE8-2B892902BF26} = {DD0A721E-E759-40BA-A5CF-7E327ED62753}
 	EndGlobalSection
 EndGlobal
