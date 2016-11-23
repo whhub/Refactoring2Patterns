@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ObjectStructure
 {
-    class Page
+    internal class Page : ISelect
     {
         private Layout _layout;
-        private Viewport _viewport;
+
+        public bool IsSelected
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
     }
 }

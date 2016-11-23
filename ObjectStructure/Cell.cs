@@ -5,7 +5,12 @@ using System.Text;
 
 namespace ObjectStructure
 {
-    class Cell
+    class Cell : ISelect
     {
+        public bool IsSelected
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
     }
 }

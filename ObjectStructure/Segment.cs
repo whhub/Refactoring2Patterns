@@ -4,7 +4,8 @@ namespace ObjectStructure
 {
     internal class Segment
     {
-        private Layout _layout;
-        private IEnumerable<Page> _pages;
+        private IList<Cell> _cells = new List<Cell>();
+        private IList<Page> _pages = new List<Page>();
+
     }
 }

@@ -1,14 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ObjectStructure
 {
     internal class Card
     {
-        private IList<Cell> _cells = new List<Cell>();
         private bool _ifRepack;
-        private IList<Page> _pages = new List<Page>();
-        private IList<Segment> _segments = new List<Segment>();
+        private readonly IList<Segment> _segments = new List<Segment>();
+
+        public void AddPage()
+        {
+            //var lastSegment = _segments.LastOrDefault();
+            //Page lastPage;
+            //if (lastSegment != null)
+            //    lastPage = lastSegment.
+            //        var
+            //segment = new Segment(layout, cells);
+        }
 
         public void InsertCells(IEnumerable<Cell> cells, int pageIndex, int cellIndex)
         {
