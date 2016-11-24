@@ -5,17 +5,15 @@ using System.Linq;
 
 namespace ObjectStructure
 {
-    public class SelectableList<T> where T : class, ISelect
+    public class SelectableList<T> : List<T> where T : class, ISelect
     {
         private T _focus;
-        private readonly List<T> _elements;
 
-        public SelectableList(IEnumerable<T> elements)
+        public SelectableList(IEnumerable<T> elements) : base(elements)
         {
-            _elements = elements.ToList();
             RegisterElementEvent();
 
-            Focus = _elements.FirstOrDefault(e => e.IsFocused);
+            Focus = this.FirstOrDefault(e => e.IsFocused);
         }
 
         public T Focus
@@ -60,7 +58,7 @@ namespace ObjectStructure
             // 2.2 only shift pressed
             else if (clickStatus.IsShiftPressed)
             {
-                _elements.ForEach(e => e.IsSelected = false);
+                ForEach(e => e.IsSelected = false);
                 SelectRangeFromFocusTo(operationElement, true);
             }
             // 2.3 only ctrl pressed
@@ -83,15 +81,15 @@ namespace ObjectStructure
         private void SelectRangeFromFocusTo(T operationElement, bool isSelected)
         {
             if (Focus == null) return;
-            var focusIndex = _elements.IndexOf(Focus);
-            var operataionIndex = _elements.IndexOf(operationElement);
+            var focusIndex = IndexOf(Focus);
+            var operataionIndex = IndexOf(operationElement);
 
             SelectRange(focusIndex, operataionIndex, isSelected);
         }
 
         private void SelectOnly(T element)
         {
-            _elements.ForEach(e => e.IsSelected = false);
+            ForEach(e => e.IsSelected = false);
 
             element.IsSelected = true;
 
@@ -104,17 +102,17 @@ namespace ObjectStructure
             var last = Math.Max(index1, index2);
 
             Debug.Assert(first >= 0);
-            Debug.Assert(last < _elements.Count);
+            Debug.Assert(last < Count);
 
             for (var i = first; i <= last; i++)
             {
-                _elements.ElementAt(i).IsSelected = isSelected;
+                this.ElementAt(i).IsSelected = isSelected;
             }
         }
 
         private void RegisterElementEvent()
         {
-            foreach (var element in _elements)
+            foreach (var element in this)
             {
                 element.Clicked -= ElementOnClicked;
                 element.Clicked += ElementOnClicked;
