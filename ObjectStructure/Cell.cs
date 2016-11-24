@@ -4,6 +4,15 @@ using System.Linq;
 
 namespace ObjectStructure
 {
+    class CellFactory
+    {
+        public static Cell CreateCell()
+        {
+            return new EmptyCell();
+        }
+    }
+
+
     abstract class Cell
     {
         public abstract IEnumerable<ImageCell> ImageCells { get; } 
@@ -37,6 +46,10 @@ namespace ObjectStructure
         }
 
         #endregion
+    }
+
+    class EmptyCell : ImageCell
+    {
     }
 
     class AppCell : ImageCell

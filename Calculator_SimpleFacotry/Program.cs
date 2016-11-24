@@ -18,34 +18,14 @@ namespace Calculator_SimpleFacotry
             {
                 var numberA = Convert.ToDouble(strNumberA);
                 var numberB = Convert.ToDouble(strNumberB);
-                result = Result(strOperate, numberA, numberB);
+                var operater = OperatorFactory.CreateOperator(strOperate);
+                result = operater.Operate(numberA, numberB);
             }
             catch (Exception e)
             {
                 Console.WriteLine("您的输入有错：" + e.Message);
             }
             Console.WriteLine("结果是：" + result);
-        }
-
-        private static double Result(string strOperate, double numberA, double numberB)
-        {
-            double result = 0;
-            switch (strOperate)
-            {
-                case "+":
-                    result = (numberA + numberB);
-                    break;
-                case "-":
-                    result = (numberA - numberB);
-                    break;
-                case "*":
-                    result = (numberA*numberB);
-                    break;
-                case "/":
-                    result = (numberA/numberB);
-                    break;
-            }
-            return result;
         }
     }
 }

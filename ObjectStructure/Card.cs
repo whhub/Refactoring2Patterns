@@ -9,6 +9,8 @@ namespace ObjectStructure
         private Board _board;
         private SelectableList<ImageCell> _cells;
         private bool _ifRepack;
+        private int _boardNo;
+        private int _displayMode;
         private SelectableList<Page> _pages;
         private readonly List<Segment> _segments = new List<Segment>();
         // Called When Initialized
@@ -33,7 +35,7 @@ namespace ObjectStructure
 
         private Layout GetNewPageLayout()
         {
-            var lastPage = _pages.LastOrDefault();
+            var lastPage = _pages == null ? null : _pages.LastOrDefault();
             return lastPage == null ? LayoutFactory.Instance.DefaultLayout() : lastPage.Layout;
         }
 
@@ -50,6 +52,7 @@ namespace ObjectStructure
         public Board BuildBoard()
         {
             _board = new Board();
+            return _board;
         }
 
         public void Repack()

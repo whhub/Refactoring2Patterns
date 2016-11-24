@@ -11,7 +11,7 @@ namespace ObjectStructure
             Pages = new List<Page>();
             for (var i = 0; i < layout.Capacity; i++)
             {
-                _cells.Add(new Cell());
+                _cells.Add(CellFactory.CreateCell());
             }
             var page = new Page(layout, _cells);
             Pages.Add(page);
