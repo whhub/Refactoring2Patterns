@@ -2,7 +2,7 @@
 
 namespace ObjectStructure
 {
-    internal interface ISelect
+    public interface ISelect
     {
         bool IsSelected { get; set; }
         bool IsFocused { get; set; }

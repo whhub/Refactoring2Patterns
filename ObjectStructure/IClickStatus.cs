@@ -1,6 +1,6 @@
 ﻿namespace ObjectStructure
 {
-    internal interface IClickStatus
+    public interface IClickStatus
     {
         bool IsLeftMouseButtonClicked { get; }
         bool IsRightMouseButtonClicked { get; }

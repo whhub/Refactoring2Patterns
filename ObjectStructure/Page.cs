@@ -13,12 +13,25 @@ namespace ObjectStructure
             Cells = cells;
         }
 
+
+        public Layout Layout { get; set; }
+
+        #region [--Implementation of ISelect--]
+
         public bool IsSelected
         {
             get { throw new NotImplementedException(); }
             set { throw new NotImplementedException(); }
         }
 
-        public Layout Layout { get; set; }
+        public bool IsFocused
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
+        public event EventHandler<ClickStatusEventArgs> Clicked;
+
+        #endregion[--Implementation of ISelect--]
     }
 }

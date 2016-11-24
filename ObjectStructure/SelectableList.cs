@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ObjectStructure
 {
-    internal class SelectableList<T> where T : class, ISelect
+    public class SelectableList<T> where T : class, ISelect
     {
         private T _focus;
         private readonly List<T> _elements;

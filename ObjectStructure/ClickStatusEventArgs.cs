@@ -2,7 +2,7 @@
 
 namespace ObjectStructure
 {
-    internal class ClickStatusEventArgs : EventArgs
+    public class ClickStatusEventArgs : EventArgs
     {
         public ClickStatusEventArgs(IClickStatus clickStatus)
         {
