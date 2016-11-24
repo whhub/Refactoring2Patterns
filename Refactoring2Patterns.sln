@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectStructure", "ObjectSt
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Talk About Design Patterns", "Talk About Design Patterns", "{DD0A721E-E759-40BA-A5CF-7E327ED62753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator_SimpleFacotry", "Calculator_SimpleFacotry\Calculator_SimpleFacotry.csproj", "{E18C10FF-4CDC-4496-AAE8-2B892902BF26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator_SimpleFactory", "Calculator_SimpleFacotry\Calculator_SimpleFactory.csproj", "{E18C10FF-4CDC-4496-AAE8-2B892902BF26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectStructure_UT", "ObjectStructure_UT\ObjectStructure_UT.csproj", "{4332C9D0-FCB0-424F-80EA-6335FFCBA825}"
 EndProject
@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Refactoring2Patterns.vsmdi = Refactoring2Patterns.vsmdi
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashRegister_Strategy", "CashRegister\CashRegister_Strategy.csproj", "{C7043A09-45C2-4604-B473-7CE864D766BF}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -71,11 +73,22 @@ Global
 		{4332C9D0-FCB0-424F-80EA-6335FFCBA825}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{4332C9D0-FCB0-424F-80EA-6335FFCBA825}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{4332C9D0-FCB0-424F-80EA-6335FFCBA825}.Release|x86.ActiveCfg = Release|Any CPU
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Debug|x86.ActiveCfg = Debug|x86
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Debug|x86.Build.0 = Debug|x86
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Release|Any CPU.ActiveCfg = Release|x86
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Release|x86.ActiveCfg = Release|x86
+		{C7043A09-45C2-4604-B473-7CE864D766BF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E18C10FF-4CDC-4496-AAE8-2B892902BF26} = {DD0A721E-E759-40BA-A5CF-7E327ED62753}
+		{C7043A09-45C2-4604-B473-7CE864D766BF} = {DD0A721E-E759-40BA-A5CF-7E327ED62753}
 	EndGlobalSection
 EndGlobal

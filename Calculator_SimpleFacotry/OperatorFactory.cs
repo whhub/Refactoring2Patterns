@@ -1,6 +1,7 @@
 using System;
+using Calculator_SimpleFactory;
 
-namespace Calculator_SimpleFacotry
+namespace Calculator_SimpleFactory
 {
     class OperatorFactory
     {

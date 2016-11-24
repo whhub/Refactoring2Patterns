@@ -1,4 +1,4 @@
-﻿namespace Calculator_SimpleFacotry
+﻿namespace Calculator_SimpleFactory
 {
     abstract class Operator
     {
