@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace ObjectStructure
 {
     internal class Card
     {
-        private IEnumerable<Cell> _cells = new List<Cell>();
+        private Board _board;
+        private SelectableList<ImageCell> _cells;
         private bool _ifRepack;
-        private IEnumerable<Page> _pages = new List<Page>();
+        private SelectableList<Page> _pages;
         private readonly List<Segment> _segments = new List<Segment>();
-
+        // Called When Initialized
         public void AddPage()
         {
             var layout = GetNewPageLayout();
@@ -22,8 +23,10 @@ namespace ObjectStructure
 
         private void RebuildLink()
         {
-            _pages = _segments.SelectMany(s => s.Pages);
-            _cells = _pages.SelectMany(p => p.Cells);
+            var pages = _segments.SelectMany(s => s.Pages).ToList();
+            _pages = new SelectableList<Page>(pages);
+            var cells = _pages.SelectMany(p => p.Cells).SelectMany(c => c.ImageCells);
+            _cells = new SelectableList<ImageCell>(cells);
 
             BuildBoard();
         }
@@ -40,11 +43,13 @@ namespace ObjectStructure
 
         public void AppendCells(IEnumerable<Cell> cells)
         {
+            var lastSegment = _segments.LastOrDefault();
+            Debug.Assert(lastSegment != null);
         }
 
         public Board BuildBoard()
         {
-            throw new NotImplementedException();
+            _board = new Board();
         }
 
         public void Repack()

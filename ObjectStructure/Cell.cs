@@ -1,8 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ObjectStructure
 {
-    internal class Cell : ISelect
+    abstract class Cell
+    {
+        public abstract IEnumerable<ImageCell> ImageCells { get; } 
+    }
+
+    internal abstract class ImageCell : Cell, ISelect
     {
         #region [--Implemented From ISelect--]
 
@@ -21,5 +28,43 @@ namespace ObjectStructure
         public event EventHandler<ClickStatusEventArgs> Clicked;
 
         #endregion [--Implemented From ISelect--]
+
+        #region Overrides of Cell
+
+        public override IEnumerable<ImageCell> ImageCells
+        {
+            get { return new List<ImageCell> {this}; }
+        }
+
+        #endregion
+    }
+
+    class AppCell : ImageCell
+    {
+    }
+
+    class LocalCell : ImageCell
+    {
+    }
+
+    class MultiformatCell : Cell
+    {
+        private Layout _layout;
+        private List<ImageCell> _cells;
+
+        public MultiformatCell(Layout layout, IEnumerable<ImageCell> cells)
+        {
+            _layout = layout;
+            _cells = cells.ToList();
+        }
+
+        #region Overrides of Cell
+
+        public override IEnumerable<ImageCell> ImageCells
+        {
+            get { return _cells; }
+        }
+
+        #endregion
     }
 }
