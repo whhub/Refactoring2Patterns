@@ -44,7 +44,7 @@ namespace ObjectStructure
                 if (clickStatus.IsCtrlPressed && !clickStatus.IsShiftPressed) return; // modifier key, only ctrl pressed
                 if (operationElement.IsSelected) return; // click on selected element
 
-                SelectOnly(operationElement);
+                SelectOnlyAndFocusAt(operationElement);
                 return;
             }
 
@@ -70,7 +70,7 @@ namespace ObjectStructure
             // 2.4 no modifier key pressed
             else
             {
-                SelectOnly(operationElement);
+                SelectOnlyAndFocusAt(operationElement);
             }
         }
 
@@ -87,13 +87,18 @@ namespace ObjectStructure
             SelectRange(focusIndex, operataionIndex, isSelected);
         }
 
+        private void SelectOnlyAndFocusAt(T element)
+        {
+            SelectOnly(element);
+
+            Focus = element;
+        }
+
         private void SelectOnly(T element)
         {
             ForEach(e => e.IsSelected = false);
 
             element.IsSelected = true;
-
-            Focus = element;
         }
 
         private void SelectRange(int index1, int index2, bool isSelected)
