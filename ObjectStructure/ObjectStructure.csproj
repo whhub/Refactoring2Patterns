@@ -49,6 +49,7 @@
     <Compile Include="ClickStatusEventArgs.cs" />
     <Compile Include="IClickStatus.cs" />
     <Compile Include="ISelect.cs" />
+    <Compile Include="ISelectRange.cs" />
     <Compile Include="Layout.cs" />
     <Compile Include="LayoutFactory.cs" />
     <Compile Include="Page.cs" />
