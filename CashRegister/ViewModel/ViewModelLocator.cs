@@ -55,7 +55,6 @@ namespace CashRegister.ViewModel
         
         public static void Cleanup()
         {
-            // TODO Clear the ViewModels
         }
     }
 }
