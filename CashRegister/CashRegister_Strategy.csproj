@@ -71,6 +71,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CashRegisterViewModelLocator.cs" />
+    <Compile Include="NormalPriceStrategy.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="PriceStrategy.cs" />
+    <Compile Include="RebatePriceStratey.cs" />
+    <Compile Include="ReturnPriceStrategy.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
