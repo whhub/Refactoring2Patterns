@@ -1,9 +1,9 @@
 ﻿namespace CodingPeasantHotelClock
 {
-    public class PhoneClock
+    public class PhoneClock : Clock
     {
         private HotelWorldClockSystem _hotelWorldClockSystem;
-        private readonly int _utcOffset;
+        private int _time;
 
         public PhoneClock(int utcOffset)
         {
@@ -15,13 +15,20 @@
             set { _hotelWorldClockSystem = value; }
         }
 
-        public void SetTime(int time)
+        public void SetTime(int value)
         {
-            var utcZeroTime = time - _utcOffset;
+            _time = value;
+            if (_hotelWorldClockSystem == null) return;
+            var utcZeroTime = value - _utcOffset;
             foreach (var clock in _hotelWorldClockSystem.Clocks)
             {
                 clock.UtcZeroTime = utcZeroTime;
             }
+        }
+
+        public override int GetTime()
+        {
+            return _time;
         }
     }
 }

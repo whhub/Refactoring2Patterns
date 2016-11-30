@@ -6,21 +6,29 @@ namespace CodingPeasantHotelClock_UT
     [TestClass]
     public class HotelWorldClocksTest
     {
+        private HotelWorldClockSystem _hotelWorldClockSystem;
+        private PhoneClock _phoneClock;
+
+        [TestInitialize]
+        public void SetUp()
+        {
+            _hotelWorldClockSystem = new HotelWorldClockSystem();
+            _phoneClock = new PhoneClock(8);
+        }
+
         [TestMethod]
         public void The_time_of_clock_London_should_be_1_after_the_phone_clock_is_set_to_9_Beijing_time()
         {
             // Arrange
             var londonClock = new CityClock(0);
-            var phoneClock = new PhoneClock(8);
-            var hotelWorldClockSystem = new HotelWorldClockSystem();
-            hotelWorldClockSystem.Attach(londonClock);
+            _hotelWorldClockSystem.Attach(londonClock);
 
             // Act
-            phoneClock.HotelWorldClockSystem = hotelWorldClockSystem;
-            phoneClock.SetTime(9);
+            _phoneClock.HotelWorldClockSystem = _hotelWorldClockSystem;
+            _phoneClock.SetTime(9);
 
             // Assert
-            Assert.AreEqual(1, londonClock.Time);
+            Assert.AreEqual(1, londonClock.GetTime());
         }
 
         [TestMethod]
@@ -28,16 +36,14 @@ namespace CodingPeasantHotelClock_UT
         {
             // Arrage
             var newYorkClock = new CityClock(-5);
-            var phoneClock = new PhoneClock(8);
-            var hotelWorldClockSystem = new HotelWorldClockSystem();
-            hotelWorldClockSystem.Attach(newYorkClock);
+            _hotelWorldClockSystem.Attach(newYorkClock);
 
             // Act
-            phoneClock.HotelWorldClockSystem = hotelWorldClockSystem;
-            phoneClock.SetTime(9);
+            _phoneClock.HotelWorldClockSystem = _hotelWorldClockSystem;
+            _phoneClock.SetTime(9);
 
             // Assert
-            Assert.AreEqual(20, newYorkClock.Time);
+            Assert.AreEqual(20, newYorkClock.GetTime());
         }
 
         [TestMethod]
@@ -48,18 +54,42 @@ namespace CodingPeasantHotelClock_UT
             // Arrange
             var londonClock = new CityClock(0);
             var newYorkClock = new CityClock(-5);
-            var phoneClock = new PhoneClock(8);
-            var hotelWorldClockSystem = new HotelWorldClockSystem();
-            hotelWorldClockSystem.Attach(londonClock);
-            hotelWorldClockSystem.Attach(newYorkClock);
+            _hotelWorldClockSystem.Attach(londonClock);
+            _hotelWorldClockSystem.Attach(newYorkClock);
 
             // Act
-            phoneClock.HotelWorldClockSystem = hotelWorldClockSystem;
-            phoneClock.SetTime(9);
+            _phoneClock.HotelWorldClockSystem = _hotelWorldClockSystem;
+            _phoneClock.SetTime(9);
 
             // Assert
-            Assert.AreEqual(1, londonClock.Time);
-            Assert.AreEqual(20, newYorkClock.Time);
+            Assert.AreEqual(1, londonClock.GetTime());
+            Assert.AreEqual(20, newYorkClock.GetTime());
+        }
+
+        [TestMethod]
+        public void The_time_of_the_phone_clock_should_be_set_correctly_after_its_setTime_method_is_invoked()
+        {
+            // Arrange
+
+            // Act
+            _phoneClock.SetTime(9);
+            // Assert 
+            Assert.AreEqual(9, _phoneClock.GetTime());
+        }
+
+        [TestMethod]
+        public void The_time_of_clock_Moscow_should_be_5_after_the_phone_clock_is_set_to_9_Beijing_time()
+        {
+            // Arrange
+            var moscowClock = new CityClock(4);
+            _hotelWorldClockSystem.Attach(moscowClock);
+
+            // Act
+            _phoneClock.HotelWorldClockSystem = _hotelWorldClockSystem;
+            _phoneClock.SetTime(9);
+
+            // Assert
+            Assert.AreEqual(5, moscowClock.GetTime()); ;
         }
     }
 }
