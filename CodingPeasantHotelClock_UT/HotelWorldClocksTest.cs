@@ -12,10 +12,12 @@ namespace CodingPeasantHotelClock_UT
             // Arrange
             var londonClock = new CityClock(0);
             var phoneClock = new PhoneClock(8);
-            phoneClock.CityClock = londonClock;
-            phoneClock.SetTime(9);
+            var hotelWorldClockSystem = new HotelWorldClockSystem();
+            hotelWorldClockSystem.Attach(londonClock);
 
             // Act
+            phoneClock.HotelWorldClockSystem = hotelWorldClockSystem;
+            phoneClock.SetTime(9);
 
             // Assert
             Assert.AreEqual(1, londonClock.Time);
@@ -27,9 +29,11 @@ namespace CodingPeasantHotelClock_UT
             // Arrage
             var newYorkClock = new CityClock(-5);
             var phoneClock = new PhoneClock(8);
+            var hotelWorldClockSystem = new HotelWorldClockSystem();
+            hotelWorldClockSystem.Attach(newYorkClock);
 
             // Act
-            phoneClock.CityClock = newYorkClock;
+            phoneClock.HotelWorldClockSystem = hotelWorldClockSystem;
             phoneClock.SetTime(9);
 
             // Assert
@@ -45,8 +49,12 @@ namespace CodingPeasantHotelClock_UT
             var londonClock = new CityClock(0);
             var newYorkClock = new CityClock(-5);
             var phoneClock = new PhoneClock(8);
+            var hotelWorldClockSystem = new HotelWorldClockSystem();
+            hotelWorldClockSystem.Attach(londonClock);
+            hotelWorldClockSystem.Attach(newYorkClock);
 
             // Act
+            phoneClock.HotelWorldClockSystem = hotelWorldClockSystem;
             phoneClock.SetTime(9);
 
             // Assert

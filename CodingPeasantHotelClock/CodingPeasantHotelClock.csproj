@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CityClock.cs" />
+    <Compile Include="HotelWorldClockSystem.cs" />
     <Compile Include="PhoneClock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
