@@ -43,6 +43,7 @@ namespace UglyTrivia
             return "Rock Question " + index;
         }
 
+        //TODO: Remove the unused method Game.isPlayable()
         public bool isPlayable()
         {
             return (howManyPlayers() >= 2);
