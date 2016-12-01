@@ -49,6 +49,7 @@ namespace UglyTrivia
             return (howManyPlayers() >= 2);
         }
 
+        // TODO: The return value of method Game.add() is not used
         public bool add(String playerName)
         {
 
@@ -58,6 +59,7 @@ namespace UglyTrivia
             purses[howManyPlayers()] = 0;
             inPenaltyBox[howManyPlayers()] = false;
 
+            // TODO: Replace Console.WriteLine with a log method of a logger
             Console.WriteLine(playerName + " was added");
             Console.WriteLine("They are player number " + players.Count);
             return true;
