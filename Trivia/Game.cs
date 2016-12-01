@@ -32,10 +32,11 @@ namespace UglyTrivia
                 popQuestions.AddLast("Pop Question " + i);
                 scienceQuestions.AddLast(("Science Question " + i));
                 sportsQuestions.AddLast(("Sports Question " + i));
+                // TODO: inline method Game.createRockQuestion              
                 rockQuestions.AddLast(createRockQuestion(i));
             }
         }
-
+        
         public String createRockQuestion(int index)
         {
             return "Rock Question " + index;
