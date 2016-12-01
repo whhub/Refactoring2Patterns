@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingPeasantHotelClock_UT"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingPeasantHotelClock", "CodingPeasantHotelClock\CodingPeasantHotelClock.csproj", "{94D7A258-B862-4375-BC07-0E80088EB14A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trivia", "Trivia\Trivia.csproj", "{6873FAE2-259E-43DE-B73B-0D2DA7448B45}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Refactoring2Patterns.vsmdi
@@ -121,6 +123,16 @@ Global
 		{94D7A258-B862-4375-BC07-0E80088EB14A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{94D7A258-B862-4375-BC07-0E80088EB14A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{94D7A258-B862-4375-BC07-0E80088EB14A}.Release|x86.ActiveCfg = Release|Any CPU
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Debug|x86.ActiveCfg = Debug|x86
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Debug|x86.Build.0 = Debug|x86
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Release|Any CPU.ActiveCfg = Release|x86
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Release|Mixed Platforms.Build.0 = Release|x86
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Release|x86.ActiveCfg = Release|x86
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,5 +142,6 @@ Global
 		{C7043A09-45C2-4604-B473-7CE864D766BF} = {DD0A721E-E759-40BA-A5CF-7E327ED62753}
 		{0D695C10-F852-46FE-ADE4-CD390C85D2B6} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
 		{94D7A258-B862-4375-BC07-0E80088EB14A} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
+		{6873FAE2-259E-43DE-B73B-0D2DA7448B45} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
 	EndGlobalSection
 EndGlobal
