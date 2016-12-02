@@ -65,7 +65,7 @@ namespace UglyTrivia
             return true;
         }
 
-        //The method Game.howManyPlayers() should be private because it is only used by its own class Game.
+        //TODO: The method Game.howManyPlayers() should be private because it is only used by its own class Game.
         public int howManyPlayers()
         {
             return players.Count;
@@ -101,7 +101,7 @@ namespace UglyTrivia
             }
             else
             {
-
+                // TODO: Duplicate code in method Game.roll()
                 places[currentPlayer] = places[currentPlayer] + roll;
                 if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
 
