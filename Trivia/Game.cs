@@ -38,7 +38,6 @@ namespace UglyTrivia
 
             // TODO: Move playerName into class Player
             players.Add(new Player(playerName));
-            places[howManyPlayers()] = 0;
             purses[howManyPlayers()] = 0;
             inPenaltyBox[howManyPlayers()] = false;
 
@@ -82,14 +81,12 @@ namespace UglyTrivia
 
         private void currentPlayerMovesToNewPlaceAndAnswersAQuestion(int rollingNumber)
         {
-            places[currentPlayer] += rollingNumber;
-            if (places[currentPlayer] > 11) places[currentPlayer] -= 12;
+            var player = players[currentPlayer];
+            player.MoveForwardSteps(rollingNumber);
 
-            players[currentPlayer].MoveForwardSteps(rollingNumber);
-
-            Console.WriteLine(players[currentPlayer]
+            Console.WriteLine(player
                               + "'s new location is "
-                              + places[currentPlayer]);
+                              + player.Place);
             Console.WriteLine("The category is " + currentCategory());
             askQuestion();
         }

@@ -10,6 +10,11 @@ namespace UglyTrivia
             _name = playerName;
         }
 
+        public int Place
+        {
+            get { return _place; }
+        }
+
         #region Overrides of Object
 
         /// <summary>
