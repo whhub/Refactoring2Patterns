@@ -185,7 +185,7 @@ namespace UglyTrivia
             }
             else
             {
-
+                // TODO: Duplicate code in method Game.asCorrectlyAnswered().  Outer.
                 Console.WriteLine("Answer was corrent!!!!");
                 purses[currentPlayer]++;
                 Console.WriteLine(players[currentPlayer]
