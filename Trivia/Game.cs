@@ -9,7 +9,7 @@ namespace UglyTrivia
     public class Game
     {
         private List<Player> players = new List<Player>();
-        // TODO: Move places into class Player
+        // TODO-working-on: Move places into class Player
         private int[] places = new int[6];
         // TODO: Move purses into class Player
         private int[] purses = new int[6];
@@ -36,7 +36,7 @@ namespace UglyTrivia
         public void add(String playerName)
         {
 
-            // TODO-working-on: Move playerName into class Player
+            // TODO: Move playerName into class Player
             players.Add(new Player(playerName));
             places[howManyPlayers()] = 0;
             purses[howManyPlayers()] = 0;
@@ -44,7 +44,7 @@ namespace UglyTrivia
 
             // TODO-later: Replace Console.WriteLine with a log method of a logger
             Console.WriteLine(playerName + " was added");
-            Console.WriteLine("They are player number " + players.Count);
+            Console.WriteLine("The total amount of players is " + players.Count);
         }
 
         private int howManyPlayers()
@@ -84,6 +84,8 @@ namespace UglyTrivia
         {
             places[currentPlayer] = places[currentPlayer] + rollingNumber;
             if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
+
+            players[currentPlayer].MoveForwardSteps(rollingNumber);
 
             Console.WriteLine(players[currentPlayer]
                               + "'s new location is "

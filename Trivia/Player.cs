@@ -23,5 +23,10 @@ namespace UglyTrivia
         }
 
         #endregion
+
+        public void MoveForwardSteps(int rollingNumber)
+        {
+            
+        }
     }
 }
