@@ -3,6 +3,7 @@ namespace UglyTrivia
     public class Player
     {
         private readonly string _name;
+        private int _place;
 
         public Player(string playerName)
         {
@@ -24,9 +25,10 @@ namespace UglyTrivia
 
         #endregion
 
-        public void MoveForwardSteps(int rollingNumber)
+        public void MoveForwardSteps(int steps)
         {
-            
+            _place += steps;
+            if (_place > 11) _place -= 12;
         }
     }
 }
