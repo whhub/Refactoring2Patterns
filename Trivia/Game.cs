@@ -166,6 +166,7 @@ namespace UglyTrivia
                             + purses[currentPlayer]
                             + " Gold Coins.");
 
+                    // TODO: Rename variable 'winner' to be 'isGameStillInProgress'.
                     bool winner = didPlayerWin();
                     currentPlayer++;
                     if (currentPlayer == players.Count) currentPlayer = 0;
