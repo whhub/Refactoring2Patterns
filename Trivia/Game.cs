@@ -13,12 +13,6 @@ namespace UglyTrivia
         private int[] purses = new int[6];
         private bool[] inPenaltyBox = new bool[6];
 
-        // TODO-Working-On: Move question lists to a new  class QuestionMaker
-        private LinkedList<string> popQuestions = new LinkedList<string>();
-        private LinkedList<string> scienceQuestions = new LinkedList<string>();
-        private LinkedList<string> sportsQuestions = new LinkedList<string>();
-        private LinkedList<string> rockQuestions = new LinkedList<string>();
-
         private int currentPlayer = 0;
         private bool isGettingOutOfPenaltyBox;
 
