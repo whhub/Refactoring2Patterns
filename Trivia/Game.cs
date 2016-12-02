@@ -82,8 +82,8 @@ namespace UglyTrivia
 
         private void currentPlayerMovesToNewPlaceAndAnswersAQuestion(int rollingNumber)
         {
-            places[currentPlayer] = places[currentPlayer] + rollingNumber;
-            if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
+            places[currentPlayer] += rollingNumber;
+            if (places[currentPlayer] > 11) places[currentPlayer] -= 12;
 
             players[currentPlayer].MoveForwardSteps(rollingNumber);
 
