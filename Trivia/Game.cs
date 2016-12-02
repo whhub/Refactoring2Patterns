@@ -16,6 +16,7 @@ namespace UglyTrivia
 
         private int currentPlayer = 0;
         private bool isGettingOutOfPenaltyBox;
+        private QuestionMaker _questionMaker = new QuestionMaker();
 
         public Game()
         {
