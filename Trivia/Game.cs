@@ -165,7 +165,7 @@ namespace UglyTrivia
                               + purses[currentPlayer]
                               + " Gold Coins.");
 
-            bool isGameStillInProgress = didPlayerWin();
+            bool isGameStillInProgress = this.isGameStillInProgress();
             nextPlayer();
 
             return isGameStillInProgress;
@@ -186,12 +186,11 @@ namespace UglyTrivia
             currentPlayer++;
             if (currentPlayer == players.Count) currentPlayer = 0;
 
-            // TODO: The return value of method Game.wrongAnswer() is unnecessary and should be eliminated
+            // TODO-later: The return value of method Game.wrongAnswer() is unnecessary and should be eliminated
             return true;
         }
 
-        // TODO: The name of the method Game.didPlayerWin() should be Game.isGameStillInProgress
-        private bool didPlayerWin()
+        private bool isGameStillInProgress()
         {
             return !(purses[currentPlayer] == 6);
         }
