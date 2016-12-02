@@ -13,5 +13,27 @@ namespace Trivia
         private LinkedList<string> sportsQuestions = new LinkedList<string>();
         private LinkedList<string> rockQuestions = new LinkedList<string>();
 
+        public void AddPopQuestion(string s)
+        {
+            popQuestions.AddLast(s);
+
+        }
+
+        public void AddScienceQuestion(string s)
+        {
+            scienceQuestions.AddLast(s);
+
+        }
+
+        public void AddSportsQuestion(string s)
+        {
+            sportsQuestions.AddLast(s);
+
+        }
+
+        public void AddRockQuestion(string s)
+        {
+            rockQuestions.AddLast(s);
+        }
     }
 }
