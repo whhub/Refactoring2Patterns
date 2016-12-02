@@ -186,5 +186,4 @@ namespace UglyTrivia
             return !(purses[currentPlayer] == 6);
         }
     }
-
 }
