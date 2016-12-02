@@ -209,6 +209,8 @@ namespace UglyTrivia
 
             currentPlayer++;
             if (currentPlayer == players.Count) currentPlayer = 0;
+
+            // TODO: The return value of method Game.wrongAnswer() is unnecessary and should be eliminated
             return true;
         }
 
