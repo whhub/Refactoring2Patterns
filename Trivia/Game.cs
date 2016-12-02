@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Trivia;
 
 namespace UglyTrivia
 {
@@ -20,10 +21,10 @@ namespace UglyTrivia
         {
             for (int i = 0; i < 50; i++)
             {
-                popQuestions.AddLast("Pop Question " + i);
-                scienceQuestions.AddLast(("Science Question " + i));
-                sportsQuestions.AddLast(("Sports Question " + i));
-                rockQuestions.AddLast("Rock Question " + i);
+                _questionMaker.AddPopQuestion("Pop Question " + i);
+                _questionMaker.AddScienceQuestion(("Science Question " + i));
+                _questionMaker.AddSportsQuestion(("Sports Question " + i));
+                _questionMaker.AddRockQuestion("Rock Question " + i);
             }
         }
         
