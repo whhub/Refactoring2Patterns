@@ -7,12 +7,10 @@ namespace UglyTrivia
 {
     public class Game
     {
-
+        // TODO: Move playerName, places, purses and inPenaltyBox to a new class Player
         private List<string> players = new List<string>();
-
         private int[] places = new int[6];
         private int[] purses = new int[6];
-
         private bool[] inPenaltyBox = new bool[6];
 
         private LinkedList<string> popQuestions = new LinkedList<string>();
