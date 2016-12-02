@@ -46,7 +46,7 @@ namespace UglyTrivia
             purses[howManyPlayers()] = 0;
             inPenaltyBox[howManyPlayers()] = false;
 
-            // TODO: Replace Console.WriteLine with a log method of a logger
+            // TODO-later: Replace Console.WriteLine with a log method of a logger
             Console.WriteLine(playerName + " was added");
             Console.WriteLine("They are player number " + players.Count);
             return true;
