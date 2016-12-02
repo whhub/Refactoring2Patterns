@@ -95,23 +95,19 @@ namespace UglyTrivia
         {
             if (currentCategory() == "Pop")
             {
-                Console.WriteLine(popQuestions.First());
-                popQuestions.RemoveFirst();
+                Console.WriteLine(_questionMaker.RemoveFirstPopQuestion());
             }
             if (currentCategory() == "Science")
             {
-                Console.WriteLine(scienceQuestions.First());
-                scienceQuestions.RemoveFirst();
+                Console.WriteLine(_questionMaker.RemoveFirstScienceQuestion());
             }
             if (currentCategory() == "Sports")
             {
-                Console.WriteLine(sportsQuestions.First());
-                sportsQuestions.RemoveFirst();
+                Console.WriteLine(_questionMaker.RemoveFirstSportsQuestion());
             }
             if (currentCategory() == "Rock")
             {
-                Console.WriteLine(rockQuestions.First());
-                rockQuestions.RemoveFirst();
+                Console.WriteLine(_questionMaker.RemoveFirstRockQuestion());
             }
         }
 
