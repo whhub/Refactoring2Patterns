@@ -35,11 +35,6 @@ namespace UglyTrivia
         }
         
 
-        //TODO: Remove the unused method Game.isPlayable()
-        public bool isPlayable()
-        {
-            return (howManyPlayers() >= 2);
-        }
 
         // TODO: The return value of method Game.add() is not used
         public bool add(String playerName)
