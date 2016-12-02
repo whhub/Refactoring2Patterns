@@ -57,20 +57,19 @@ namespace UglyTrivia
             return players.Count;
         }
 
-        // TODO: Rename the name of the parameter of method Game.roll() to be 'rollingNumber'
-        public void roll(int roll)
+        public void roll(int rollingNumber)
         {
             Console.WriteLine(players[currentPlayer] + " is the current player");
-            Console.WriteLine("They have rolled a " + roll);
+            Console.WriteLine("They have rolled a " + rollingNumber);
 
             if (inPenaltyBox[currentPlayer])
             {
-                if (roll % 2 != 0)
+                if (rollingNumber % 2 != 0)
                 {
                     isGettingOutOfPenaltyBox = true;
 
                     Console.WriteLine(players[currentPlayer] + " is getting out of the penalty box");
-                    places[currentPlayer] = places[currentPlayer] + roll;
+                    places[currentPlayer] = places[currentPlayer] + rollingNumber;
                     if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
 
                     Console.WriteLine(players[currentPlayer]
@@ -89,7 +88,7 @@ namespace UglyTrivia
             else
             {
                 // TODO: Duplicate code in method Game.roll()
-                places[currentPlayer] = places[currentPlayer] + roll;
+                places[currentPlayer] = places[currentPlayer] + rollingNumber;
                 if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
 
                 Console.WriteLine(players[currentPlayer]
