@@ -8,7 +8,7 @@ namespace UglyTrivia
     public class Game
     {
 
-
+        // TODO: The fields of class Game should be private
         List<string> players = new List<string>();
 
         int[] places = new int[6];
