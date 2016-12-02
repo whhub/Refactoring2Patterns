@@ -211,7 +211,7 @@ namespace UglyTrivia
             return true;
         }
 
-
+        // TODO: The name of the method Game.didPlayerWin() should be Game.isGameStillInProgress
         private bool didPlayerWin()
         {
             return !(purses[currentPlayer] == 6);
