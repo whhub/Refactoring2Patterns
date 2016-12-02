@@ -142,45 +142,39 @@ namespace UglyTrivia
             {
                 if (isGettingOutOfPenaltyBox)
                 {
-                    Console.WriteLine("Answer was correct!!!!");
-                    purses[currentPlayer]++;
-                    Console.WriteLine(players[currentPlayer]
-                            + " now has "
-                            + purses[currentPlayer]
-                            + " Gold Coins.");
-
-                    bool isGameStillInProgress = didPlayerWin();
-                    currentPlayer++;
-                    if (currentPlayer == players.Count) currentPlayer = 0;
-
-                    return isGameStillInProgress;
+                    return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
                 }
                 else
                 {
-                    currentPlayer++;
-                    if (currentPlayer == players.Count) currentPlayer = 0;
+                    nextPlayer();
                     return true;
                 }
-
-
-
             }
             else
             {
-                // TODO: Duplicate code in method Game.asCorrectlyAnswered().  Outer.
-                Console.WriteLine("Answer was corrent!!!!");
-                purses[currentPlayer]++;
-                Console.WriteLine(players[currentPlayer]
-                        + " now has "
-                        + purses[currentPlayer]
-                        + " Gold Coins.");
-
-                bool isGameStillInProgress = didPlayerWin();
-                currentPlayer++;
-                if (currentPlayer == players.Count) currentPlayer = 0;
-
-                return isGameStillInProgress;
+                return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
             }
+        }
+
+        private bool currentPlayerGetsAGoldCoinAndSelectNextPlayer()
+        {
+            Console.WriteLine("Answer was correct!!!!");
+            purses[currentPlayer]++;
+            Console.WriteLine(players[currentPlayer]
+                              + " now has "
+                              + purses[currentPlayer]
+                              + " Gold Coins.");
+
+            bool isGameStillInProgress = didPlayerWin();
+            nextPlayer();
+
+            return isGameStillInProgress;
+        }
+
+        private void nextPlayer()
+        {
+            currentPlayer++;
+            if (currentPlayer == players.Count) currentPlayer = 0;
         }
 
         public bool wrongAnswer()
