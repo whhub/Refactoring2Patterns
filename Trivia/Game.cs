@@ -8,7 +8,7 @@ namespace UglyTrivia
 {
     public class Game
     {
-        private List<string> players = new List<string>();
+        private List<Player> players = new List<Player>();
         // TODO: Move places into class Player
         private int[] places = new int[6];
         // TODO: Move purses into class Player
