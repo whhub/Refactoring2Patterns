@@ -9,6 +9,7 @@ namespace UglyTrivia
     public class Game
     {
         // TODO: Move playerName, places, purses and inPenaltyBox to a new class Player
+        // TODO: Make player list type-safte
         private List<string> players = new List<string>();
         private int[] places = new int[6];
         private int[] purses = new int[6];
