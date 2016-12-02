@@ -69,14 +69,7 @@ namespace UglyTrivia
                     isGettingOutOfPenaltyBox = true;
 
                     Console.WriteLine(players[currentPlayer] + " is getting out of the penalty box");
-                    places[currentPlayer] = places[currentPlayer] + rollingNumber;
-                    if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
-
-                    Console.WriteLine(players[currentPlayer]
-                            + "'s new location is "
-                            + places[currentPlayer]);
-                    Console.WriteLine("The category is " + currentCategory());
-                    askQuestion();
+                    currentPlayerMovesToNewPlaceAndAnswersAQuestion(rollingNumber);
                 }
                 else
                 {
@@ -87,17 +80,21 @@ namespace UglyTrivia
             }
             else
             {
-                // TODO: Duplicate code in method Game.roll()
-                places[currentPlayer] = places[currentPlayer] + rollingNumber;
-                if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
-
-                Console.WriteLine(players[currentPlayer]
-                        + "'s new location is "
-                        + places[currentPlayer]);
-                Console.WriteLine("The category is " + currentCategory());
-                askQuestion();
+                currentPlayerMovesToNewPlaceAndAnswersAQuestion(rollingNumber);
             }
 
+        }
+
+        private void currentPlayerMovesToNewPlaceAndAnswersAQuestion(int rollingNumber)
+        {
+            places[currentPlayer] = places[currentPlayer] + rollingNumber;
+            if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
+
+            Console.WriteLine(players[currentPlayer]
+                              + "'s new location is "
+                              + places[currentPlayer]);
+            Console.WriteLine("The category is " + currentCategory());
+            askQuestion();
         }
 
         private void askQuestion()
