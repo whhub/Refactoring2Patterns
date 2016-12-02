@@ -36,5 +36,33 @@ namespace Trivia
         {
             rockQuestions.AddLast(s);
         }
+
+        public string RemoveFirstPopQuestion()
+        {
+            var question = popQuestions.First;
+            popQuestions.RemoveFirst();
+            return question.ToString();
+        }
+
+        public string RemoveFirstScienceQuestion()
+        {
+            var question = scienceQuestions.First;
+            scienceQuestions.RemoveFirst();
+            return question.ToString();
+        }
+
+        public string RemoveFirstSportsQuestion()
+        {
+            var question = sportsQuestions.First;
+            sportsQuestions.RemoveFirst();
+            return question.ToString();
+        }
+
+        public string RemoveFirstRockQuestion()
+        {
+            var question = rockQuestions.First;
+            rockQuestions.RemoveFirst();
+            return question.ToString();
+        }
     }
 }
