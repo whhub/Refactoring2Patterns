@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Trivia
 {
-    class QuestionMaker
+    public class QuestionMaker
     {
         private LinkedList<string> popQuestions = new LinkedList<string>();
         private LinkedList<string> scienceQuestions = new LinkedList<string>();
