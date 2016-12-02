@@ -23,7 +23,6 @@ namespace UglyTrivia
         private int currentPlayer = 0;
         private bool isGettingOutOfPenaltyBox;
 
-        // TODO-working-on : Check public interface of the server-side code to see how it is being used by the client-side code
         public Game()
         {
             for (int i = 0; i < 50; i++)
@@ -31,16 +30,10 @@ namespace UglyTrivia
                 popQuestions.AddLast("Pop Question " + i);
                 scienceQuestions.AddLast(("Science Question " + i));
                 sportsQuestions.AddLast(("Sports Question " + i));
-                // TODO: inline method Game.createRockQuestion              
-                rockQuestions.AddLast(createRockQuestion(i));
+                rockQuestions.AddLast("Rock Question " + i);
             }
         }
         
-        // TODO: Change method Game.createRockQuestion() to be private
-        public String createRockQuestion(int index)
-        {
-            return "Rock Question " + index;
-        }
 
         //TODO: Remove the unused method Game.isPlayable()
         public bool isPlayable()
