@@ -36,8 +36,8 @@ namespace UglyTrivia
         public void add(String playerName)
         {
 
-            // TODO: Move playerName into class Player
-            players.Add(playerName);
+            // TODO-working-on: Move playerName into class Player
+            players.Add(new Player(playerName));
             places[howManyPlayers()] = 0;
             purses[howManyPlayers()] = 0;
             inPenaltyBox[howManyPlayers()] = false;
