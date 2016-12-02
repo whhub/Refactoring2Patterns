@@ -71,6 +71,7 @@ namespace UglyTrivia
             return players.Count;
         }
 
+        // TODO: Rename the name of the parameter of method Game.roll() to be 'rollingNumber'
         public void roll(int roll)
         {
             Console.WriteLine(players[currentPlayer] + " is the current player");
