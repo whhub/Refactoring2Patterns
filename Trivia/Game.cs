@@ -8,21 +8,20 @@ namespace UglyTrivia
     public class Game
     {
 
-        // TODO: The fields of class Game should be private
-        List<string> players = new List<string>();
+        private List<string> players = new List<string>();
 
-        int[] places = new int[6];
-        int[] purses = new int[6];
+        private int[] places = new int[6];
+        private int[] purses = new int[6];
 
-        bool[] inPenaltyBox = new bool[6];
+        private bool[] inPenaltyBox = new bool[6];
 
-        LinkedList<string> popQuestions = new LinkedList<string>();
-        LinkedList<string> scienceQuestions = new LinkedList<string>();
-        LinkedList<string> sportsQuestions = new LinkedList<string>();
-        LinkedList<string> rockQuestions = new LinkedList<string>();
+        private LinkedList<string> popQuestions = new LinkedList<string>();
+        private LinkedList<string> scienceQuestions = new LinkedList<string>();
+        private LinkedList<string> sportsQuestions = new LinkedList<string>();
+        private LinkedList<string> rockQuestions = new LinkedList<string>();
 
-        int currentPlayer = 0;
-        bool isGettingOutOfPenaltyBox;
+        private int currentPlayer = 0;
+        private bool isGettingOutOfPenaltyBox;
 
         // TODO-working-on : Check public interface of the server-side code to see how it is being used by the client-side code
         public Game()
