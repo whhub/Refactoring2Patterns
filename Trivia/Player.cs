@@ -6,6 +6,7 @@ namespace UglyTrivia
         private int _place;
         private int _sumOfGoldCoins;
         private bool _isInPenaltyBox;
+        // TODO: Eliminate field Player._isGettingOutOfPenaltyBox
         private bool _isGettingOutOfPenaltyBox = true;
 
         public Player(string playerName)
