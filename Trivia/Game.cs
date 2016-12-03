@@ -86,36 +86,32 @@ namespace UglyTrivia
             Console.WriteLine(player
                               + "'s new location is "
                               + player.Place);
-            Console.WriteLine("The category is " + currentCategory());
+            Console.WriteLine("The category is " + player.CurrentCategory());
             askQuestion();
         }
 
         private void askQuestion()
         {
-            if (currentCategory() == "Pop")
+            var player = players[currentPlayer];
+            if (player.CurrentCategory() == "Pop")
             {
                 Console.WriteLine(_questionMaker.RemoveFirstPopQuestion());
             }
-            if (currentCategory() == "Science")
+            if (player.CurrentCategory() == "Science")
             {
                 Console.WriteLine(_questionMaker.RemoveFirstScienceQuestion());
             }
-            if (currentCategory() == "Sports")
+            if (player.CurrentCategory() == "Sports")
             {
                 Console.WriteLine(_questionMaker.RemoveFirstSportsQuestion());
             }
-            if (currentCategory() == "Rock")
+            if (player.CurrentCategory() == "Rock")
             {
                 Console.WriteLine(_questionMaker.RemoveFirstRockQuestion());
             }
         }
 
         // TODO-working-on: Move method Game.currentCategory to class Player
-        private String currentCategory()
-        {
-            var player = players[currentPlayer];
-            return player.CurrentCategory();
-        }
 
         public bool wasCorrectlyAnswered()
         {
