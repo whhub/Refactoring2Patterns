@@ -1,14 +1,22 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using UglyTrivia;
 
 namespace Trivia_UT
 {
     [TestClass]
     public class PlayerTest
     {
-        // TODO: the place should be 1 if the player moves forward 1 step
+        // TODO-working-on: the place should be 1 if the player moves forward 1 step
         [TestMethod]
-        public void TestMethod1()
+        public void The_place_should_be_1_if_the_player_moves_forward_1_step()
         {
+            // Arrange
+            var player = new Player("Chet");
+
+
+
+            // Assert
+            Assert.AreEqual(1, player.Place);
         }
 
         // TODO: the place should be 0 if the player moves forward 12 step
