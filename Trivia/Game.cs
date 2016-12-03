@@ -36,7 +36,6 @@ namespace UglyTrivia
 
             // TODO: Move playerName into class Player
             players.Add(new Player(playerName));
-            purses[howManyPlayers()] = 0;
             inPenaltyBox[howManyPlayers()] = false;
 
             // TODO-later: Replace Console.WriteLine with a log method of a logger
@@ -134,12 +133,11 @@ namespace UglyTrivia
         private bool currentPlayerGetsAGoldCoinAndSelectNextPlayer()
         {
             Console.WriteLine("Answer was correct!!!!");
-            purses[currentPlayer]++;
-            players[currentPlayer].WinAGoldCoin();
-            players[currentPlayer].CountGoldCoin();
-            Console.WriteLine(players[currentPlayer]
+            var player = players[currentPlayer];
+            player.WinAGoldCoin();
+            Console.WriteLine(player
                               + " now has "
-                              + purses[currentPlayer]
+                              + player.CountGoldCoin()
                               + " Gold Coins.");
 
             bool isGameStillInProgress = this.isGameStillInProgress();
@@ -170,7 +168,7 @@ namespace UglyTrivia
         private bool isGameStillInProgress()
         {
             // TODO: The magic number 6
-            return !(purses[currentPlayer] == 6);
+            return players[currentPlayer].CountGoldCoin() != 6;
         }
     }
 }
