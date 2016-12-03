@@ -103,22 +103,14 @@ namespace UglyTrivia
         public bool wasCorrectlyAnswered()
         {
             var player = players[currentPlayer];
-            if (player.IsInPenaltyBox())
-            {
-                if (player.IsGettingOutOfPenaltyBox())
-                {
-                    return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
-                }
-                else
-                {
-                    nextPlayer();
-                    return true;
-                }
-            }
-            else
+            if (!player.IsInPenaltyBox()) return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
+            if (player.IsGettingOutOfPenaltyBox())
             {
                 return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
             }
+            nextPlayer();
+            var theGameIsStillInProgress = true;
+            return theGameIsStillInProgress;
         }
 
         private bool currentPlayerGetsAGoldCoinAndSelectNextPlayer()
