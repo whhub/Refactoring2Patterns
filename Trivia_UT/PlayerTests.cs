@@ -4,7 +4,7 @@ using UglyTrivia;
 namespace Trivia_UT
 {
     [TestClass]
-    public class PlayerTest
+    public class PlayerTests
     {
         [TestMethod]
         public void The_place_should_be_1_if_the_player_moves_forward_1_step()

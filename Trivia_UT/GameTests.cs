@@ -4,7 +4,7 @@ using UglyTrivia;
 namespace Trivia_UT
 {
     [TestClass]
-    public class GameTest
+    public class GameTests
     {
         private Game _game;
         private bool _isGameStillInProgress;

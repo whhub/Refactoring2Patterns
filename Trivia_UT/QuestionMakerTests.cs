@@ -4,7 +4,7 @@ using Trivia;
 namespace Trivia_UT
 {
     [TestClass]
-    public class QuestionMakerTest
+    public class QuestionMakerTests
     {
         [TestMethod]
         public void Add_two_pop_questions_and_could_remove_the_first_one()
