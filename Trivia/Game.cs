@@ -136,6 +136,7 @@ namespace UglyTrivia
             Console.WriteLine("Answer was correct!!!!");
             purses[currentPlayer]++;
             players[currentPlayer].WinAGoldCoin();
+            players[currentPlayer].CountGoldCoin();
             Console.WriteLine(players[currentPlayer]
                               + " now has "
                               + purses[currentPlayer]

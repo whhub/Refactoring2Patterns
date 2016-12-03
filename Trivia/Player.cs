@@ -55,5 +55,10 @@ namespace UglyTrivia
         {
             
         }
+
+        public int CountGoldCoin()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
