@@ -35,5 +35,20 @@ namespace UglyTrivia
             _place += steps;
             if (_place > 11) _place -= 12;
         }
+
+        public string CurrentCategory()
+        {
+            var place = Place;
+            if (place == 0) return "Pop";
+            if (place == 4) return "Pop";
+            if (place == 8) return "Pop";
+            if (place == 1) return "Science";
+            if (place == 5) return "Science";
+            if (place == 9) return "Science";
+            if (place == 2) return "Sports";
+            if (place == 6) return "Sports";
+            if (place == 10) return "Sports";
+            return "Rock";
+        }
     }
 }

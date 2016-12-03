@@ -110,20 +110,11 @@ namespace UglyTrivia
             }
         }
 
-        // TODO: Move method Game.currentCategory to class Player
+        // TODO-working-on: Move method Game.currentCategory to class Player
         private String currentCategory()
         {
-            var place = players[currentPlayer].Place;
-            if (place == 0) return "Pop";
-            if (place == 4) return "Pop";
-            if (place == 8) return "Pop";
-            if (place == 1) return "Science";
-            if (place == 5) return "Science";
-            if (place == 9) return "Science";
-            if (place == 2) return "Sports";
-            if (place == 6) return "Sports";
-            if (place == 10) return "Sports";
-            return "Rock";
+            var player = players[currentPlayer];
+            return player.CurrentCategory();
         }
 
         public bool wasCorrectlyAnswered()
