@@ -50,5 +50,10 @@ namespace UglyTrivia
             if (place == 10) return "Sports";
             return "Rock";
         }
+
+        public void WinAGoldCoin()
+        {
+            
+        }
     }
 }
