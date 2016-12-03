@@ -41,8 +41,8 @@ namespace UglyTrivia
                 return;
             }
             
-            var isRollingNumberOdd = rollingNumber%2 != 0;
-            if (isRollingNumberOdd)
+            var isRollingNumberForGettingOutOfPenaltyBox = rollingNumber != 4;
+            if (isRollingNumberForGettingOutOfPenaltyBox)
             {
                 player.GetOutOfPenaltyBox();
 
