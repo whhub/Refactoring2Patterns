@@ -9,11 +9,8 @@ namespace UglyTrivia
     public class Game
     {
         private List<Player> players = new List<Player>();
-        // TODO-working-on: Move inPenaltyBox into class Player
-        private bool[] inPenaltyBox = new bool[6];
 
         private int currentPlayer = 0;
-        private bool isGettingOutOfPenaltyBox;
         private QuestionMaker _questionMaker = new QuestionMaker();
 
         public Game()
@@ -33,7 +30,6 @@ namespace UglyTrivia
         {
 
             players.Add(new Player(playerName));
-            inPenaltyBox[howManyPlayers()] = false;
 
             // TODO-later: Replace Console.WriteLine with a log method of a logger
             Console.WriteLine(playerName + " was added");
@@ -51,11 +47,10 @@ namespace UglyTrivia
             Console.WriteLine(player + " is the current player");
             Console.WriteLine("They have rolled a " + rollingNumber);
 
-            if (inPenaltyBox[currentPlayer] || player.IsInPenaltyBox())
+            if (player.IsInPenaltyBox())
             {
                 if (rollingNumber % 2 != 0)
                 {
-                    isGettingOutOfPenaltyBox = true;
                     player.GetOutOfPenaltyBox();
 
                     Console.WriteLine(player + " is getting out of the penalty box");
@@ -64,7 +59,6 @@ namespace UglyTrivia
                 else
                 {
                     Console.WriteLine(player + " is not getting out of the penalty box");
-                    isGettingOutOfPenaltyBox = false;
                     player.StayInPenaltyBox();
                 }
 
@@ -113,9 +107,9 @@ namespace UglyTrivia
         public bool wasCorrectlyAnswered()
         {
             var player = players[currentPlayer];
-            if (inPenaltyBox[currentPlayer] || player.IsInPenaltyBox())
+            if (player.IsInPenaltyBox())
             {
-                if (isGettingOutOfPenaltyBox || player.IsGettingOutOfPenaltyBox())
+                if (player.IsGettingOutOfPenaltyBox())
                 {
                     return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
                 }
@@ -157,7 +151,7 @@ namespace UglyTrivia
         {
             Console.WriteLine("Question was incorrectly answered");
             Console.WriteLine(players[currentPlayer] + " was sent to the penalty box");
-            inPenaltyBox[currentPlayer] = true;
+            
             players[currentPlayer].SentToPenaltyBox();
 
             currentPlayer++;
