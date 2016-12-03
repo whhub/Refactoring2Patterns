@@ -92,7 +92,7 @@ namespace UglyTrivia
 
         public void GetOutOfPenaltyBox()
         {
-            _isGettingOutOfPenaltyBox = true;
+            _isInPenaltyBox = false;
         }
 
         public void StayInPenaltyBox()
