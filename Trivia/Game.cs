@@ -111,7 +111,7 @@ namespace UglyTrivia
             }
         }
 
-
+        // TODO: Move method Game.currentCategory to class QuestionMaker
         private String currentCategory()
         {
             if (places[currentPlayer] == 0) return "Pop";
