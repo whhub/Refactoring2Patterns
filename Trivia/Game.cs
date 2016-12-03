@@ -169,6 +169,7 @@ namespace UglyTrivia
 
         private bool isGameStillInProgress()
         {
+            // TODO: The magic number 6
             return !(purses[currentPlayer] == 6);
         }
     }
