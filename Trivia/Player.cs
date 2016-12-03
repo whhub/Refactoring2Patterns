@@ -8,8 +8,7 @@ namespace UglyTrivia
         private int _place;
         private int _sumOfGoldCoins;
         private bool _isInPenaltyBox;
-        // TODO: Eliminate field Player._isGettingOutOfPenaltyBox
-        private bool _isGettingOutOfPenaltyBox = true;
+        // TODO-working-on: Eliminate field Player._isGettingOutOfPenaltyBox
 
         public static readonly int MaxNumberOfPlace = 12;
 
@@ -97,12 +96,12 @@ namespace UglyTrivia
 
         public void StayInPenaltyBox()
         {
-            _isGettingOutOfPenaltyBox = false;
+            _isInPenaltyBox = true;
         }
 
         public bool IsGettingOutOfPenaltyBox()
         {
-            return _isGettingOutOfPenaltyBox;
+            return !_isInPenaltyBox;
         }
 
         public void SentToPenaltyBox()
