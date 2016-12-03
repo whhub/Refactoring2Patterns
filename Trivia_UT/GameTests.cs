@@ -33,14 +33,14 @@ namespace Trivia_UT
         }
 
         [TestMethod]
-        public void The_game_should_be_over_if_a_player_rolls_the_dice_for_7_times_and_answers_the_question_wrongly_for_1_time_followed_by_an_odd_rolling_number_but_then_correctly_for_6_times()
+        public void The_game_should_be_over_if_a_player_rolls_the_dice_for_7_times_and_answers_the_question_wrongly_for_1_time_followed_by_an_rolling_number_which_is_not_4_but_then_correctly_for_6_times()
         {
             // Arrange
 
             // Act
             _game.roll(1);
             _game.wrongAnswer();
-            _game.roll(1);
+            _game.roll(6);
             _game.wasCorrectlyAnswered();
 
             for (int i = 0; i < 5; i++)
@@ -55,7 +55,7 @@ namespace Trivia_UT
 
         [TestMethod]
         public void
-            The_game_should_be_over_if_a_player_rolls_the_dice_for_7_times_and_answers_the_question_wrongly_for_1_time_followed_by_an_even_rolling_number_but_then_correctly_for_7_times_with_odd_rolling_numbers
+            The_game_should_be_over_if_a_player_rolls_the_dice_for_7_times_and_answers_the_question_wrongly_for_1_time_followed_by_an_rolling_number_which_is_4_but_then_correctly_for_7_times
             ()
         {
             // Arrange
@@ -63,7 +63,7 @@ namespace Trivia_UT
             // Act
             _game.roll(1);
             _game.wrongAnswer();
-            _game.roll(2);
+            _game.roll(4);
             _game.wasCorrectlyAnswered();
 
             for (int i = 0; i < 6; i++)
