@@ -51,7 +51,8 @@ namespace UglyTrivia
             if (player.IsInPenaltyBox())
             {
                 // TODO:  Introduce explaning variable isRollingNumberOdd
-                if (rollingNumber % 2 != 0)
+                var isRollingNumberOdd = rollingNumber % 2 != 0;
+                if (isRollingNumberOdd)
                 {
                     player.GetOutOfPenaltyBox();
 
@@ -63,7 +64,6 @@ namespace UglyTrivia
                     Console.WriteLine(player + " is not getting out of the penalty box");
                     player.StayInPenaltyBox();
                 }
-
             }
             else
             {
