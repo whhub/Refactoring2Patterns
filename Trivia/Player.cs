@@ -2,6 +2,10 @@ namespace UglyTrivia
 {
     public class Player
     {
+        public const string Pop = "Pop";
+        public const string Science = "Science";
+        public const string Sports = "Sports";
+        public const string Rock = "Rock";
         private readonly string _name;
         private int _place;
         private int _sumOfGoldCoins;
@@ -59,16 +63,16 @@ namespace UglyTrivia
         public static readonly int CategorySports3 = 10;
         public string CurrentCategory()
         {
-            if (Place == CategoryPop1) return "Pop";
-            if (Place == CategoryPop2) return "Pop";
-            if (Place == CategoryPop3) return "Pop";
-            if (Place == CategoryScience1) return "Science";
-            if (Place == CategoryScience2) return "Science";
-            if (Place == CategoryScience3) return "Science";
-            if (Place == CategorySports1) return "Sports";
-            if (Place == CategorySports2) return "Sports";
-            if (Place == CategorySports3) return "Sports";
-            return "Rock";
+            if (Place == CategoryPop1) return Pop;
+            if (Place == CategoryPop2) return Pop;
+            if (Place == CategoryPop3) return Pop;
+            if (Place == CategoryScience1) return Science;
+            if (Place == CategoryScience2) return Science;
+            if (Place == CategoryScience3) return Science;
+            if (Place == CategorySports1) return Sports;
+            if (Place == CategorySports2) return Sports;
+            if (Place == CategorySports3) return Sports;
+            return Rock;
         }
 
         public void WinAGoldCoin()
