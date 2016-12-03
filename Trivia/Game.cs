@@ -81,21 +81,21 @@ namespace UglyTrivia
         private void askQuestion()
         {
             var player = players[currentPlayer];
-            if (player.CurrentCategory() == "Pop")
+            var category = player.CurrentCategory();
+            switch (category)
             {
-                Console.WriteLine(_questionMaker.RemoveFirstPopQuestion());
-            }
-            if (player.CurrentCategory() == "Science")
-            {
-                Console.WriteLine(_questionMaker.RemoveFirstScienceQuestion());
-            }
-            if (player.CurrentCategory() == "Sports")
-            {
-                Console.WriteLine(_questionMaker.RemoveFirstSportsQuestion());
-            }
-            if (player.CurrentCategory() == "Rock")
-            {
-                Console.WriteLine(_questionMaker.RemoveFirstRockQuestion());
+                case "Pop":
+                    Console.WriteLine(_questionMaker.RemoveFirstPopQuestion());
+                    break;
+                case "Science":
+                    Console.WriteLine(_questionMaker.RemoveFirstScienceQuestion());
+                    break;
+                case "Sports":
+                    Console.WriteLine(_questionMaker.RemoveFirstSportsQuestion());
+                    break;
+                case "Rock":
+                    Console.WriteLine(_questionMaker.RemoveFirstRockQuestion());
+                    break;
             }
         }
 
