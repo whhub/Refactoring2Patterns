@@ -1,5 +1,3 @@
-using System;
-
 namespace UglyTrivia
 {
     public class Player
