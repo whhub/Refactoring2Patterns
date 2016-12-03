@@ -46,27 +46,24 @@ namespace UglyTrivia
             Console.WriteLine(player + " is the current player");
             Console.WriteLine("They have rolled a " + rollingNumber);
 
-            if (player.IsInPenaltyBox())
-            {
-                var isRollingNumberOdd = rollingNumber % 2 != 0;
-                if (isRollingNumberOdd)
-                {
-                    player.GetOutOfPenaltyBox();
-
-                    Console.WriteLine(player + " is getting out of the penalty box");
-                    currentPlayerMovesToNewPlaceAndAnswersAQuestion(rollingNumber);
-                }
-                else
-                {
-                    Console.WriteLine(player + " is not getting out of the penalty box");
-                    player.StayInPenaltyBox();
-                }
-            }
-            else
+            if (!player.IsInPenaltyBox())
             {
                 currentPlayerMovesToNewPlaceAndAnswersAQuestion(rollingNumber);
+                return;
             }
+            
+            var isRollingNumberOdd = rollingNumber%2 != 0;
+            if (isRollingNumberOdd)
+            {
+                player.GetOutOfPenaltyBox();
 
+                Console.WriteLine(player + " is getting out of the penalty box");
+                currentPlayerMovesToNewPlaceAndAnswersAQuestion(rollingNumber);
+                return;
+            }
+            
+            Console.WriteLine(player + " is not getting out of the penalty box");
+            player.SentToPenaltyBox();
         }
 
         private void currentPlayerMovesToNewPlaceAndAnswersAQuestion(int rollingNumber)
