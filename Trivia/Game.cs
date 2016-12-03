@@ -89,6 +89,7 @@ namespace UglyTrivia
         }
 
 
+        // TODO-later: The name of method Game.wasCorrectlyAnswered() should be Game.AnsweredCorrectly()
         public bool wasCorrectlyAnswered()
         {
             var player = players[currentPlayer];
@@ -102,6 +103,7 @@ namespace UglyTrivia
             return theGameIsStillInProgress;
         }
 
+        // TODO-later: The name of method Game.wrongAnswer() shouble be Game.AnsweredWrong() 
         private bool currentPlayerGetsAGoldCoinAndSelectNextPlayer()
         {
             Console.WriteLine("Answer was correct!!!!");
