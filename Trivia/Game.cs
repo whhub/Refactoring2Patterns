@@ -158,6 +158,7 @@ namespace UglyTrivia
             Console.WriteLine("Question was incorrectly answered");
             Console.WriteLine(players[currentPlayer] + " was sent to the penalty box");
             inPenaltyBox[currentPlayer] = true;
+            players[currentPlayer].SentToPenaltyBox();
 
             currentPlayer++;
             if (currentPlayer == players.Count) currentPlayer = 0;
