@@ -6,6 +6,7 @@ namespace UglyTrivia
         private int _place;
         private int _sumOfGoldCoins;
         private bool _isInPenaltyBox;
+        private bool _isGettingOutOfPenaltyBox = true;
 
         public Player(string playerName)
         {
@@ -68,5 +69,9 @@ namespace UglyTrivia
             return _isInPenaltyBox;
         }
 
+        public void GetOutOfPenaltyBox()
+        {
+            _isGettingOutOfPenaltyBox = true;
+        }
     }
 }
