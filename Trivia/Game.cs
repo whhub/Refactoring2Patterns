@@ -10,24 +10,13 @@ namespace UglyTrivia
 
         private int currentPlayer = 0;
         private QuestionMaker _questionMaker = new QuestionMaker();
-        private static readonly int MaxNumberOfQuestions = 50;
         public static readonly int NumberOfGoldCoinsToWonAndGameOver = 6;
 
         public Game()
         {
-            PrepareQuestions();
+            _questionMaker.PrepareQuestions();
         }
 
-        private void PrepareQuestions()
-        {
-            for (int i = 0; i < MaxNumberOfQuestions; i++)
-            {
-                _questionMaker.AddPopQuestion("Pop Question " + i);
-                _questionMaker.AddScienceQuestion(("Science Question " + i));
-                _questionMaker.AddSportsQuestion(("Sports Question " + i));
-                _questionMaker.AddRockQuestion("Rock Question " + i);
-            }
-        }
 
 
         public void add(String playerName)

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UglyTrivia;
 
 namespace Trivia
 {
@@ -59,5 +60,18 @@ namespace Trivia
             rockQuestions.RemoveFirst();
             return question.Value;
         }
+
+        public void PrepareQuestions()
+        {
+            for (int i = 0; i < MaxNumberOfQuestions; i++)
+            {
+                AddPopQuestion("Pop Question " + i);
+                AddScienceQuestion(("Science Question " + i));
+                AddSportsQuestion(("Sports Question " + i));
+                AddRockQuestion("Rock Question " + i);
+            }
+        }
+
+        private static readonly int MaxNumberOfQuestions = 50;
     }
 }
