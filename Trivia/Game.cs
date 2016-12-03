@@ -12,11 +12,12 @@ namespace UglyTrivia
 
         private int currentPlayer = 0;
         private QuestionMaker _questionMaker = new QuestionMaker();
+        private static readonly int MaxNumberOfQuestions = 50;
+        public static readonly int NumberOfGoldCoinsToWonAndGameOver = 6;
 
         public Game()
         {
-            // TODO: Magic number 50
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < MaxNumberOfQuestions; i++)
             {
                 _questionMaker.AddPopQuestion("Pop Question " + i);
                 _questionMaker.AddScienceQuestion(("Science Question " + i));
@@ -24,7 +25,6 @@ namespace UglyTrivia
                 _questionMaker.AddRockQuestion("Rock Question " + i);
             }
         }
-        
 
 
         public void add(String playerName)
@@ -50,7 +50,6 @@ namespace UglyTrivia
 
             if (player.IsInPenaltyBox())
             {
-                // TODO:  Introduce explaning variable isRollingNumberOdd
                 var isRollingNumberOdd = rollingNumber % 2 != 0;
                 if (isRollingNumberOdd)
                 {
@@ -165,8 +164,7 @@ namespace UglyTrivia
 
         private bool isGameStillInProgress()
         {
-            // TODO: The magic number 6
-            return players[currentPlayer].CountGoldCoin() != 6;
+            return players[currentPlayer].CountGoldCoin() != NumberOfGoldCoinsToWonAndGameOver;
         }
     }
 }
