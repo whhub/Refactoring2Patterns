@@ -15,6 +15,11 @@ namespace UglyTrivia
 
         public Game()
         {
+            PrepareQuestions();
+        }
+
+        private void PrepareQuestions()
+        {
             for (int i = 0; i < MaxNumberOfQuestions; i++)
             {
                 _questionMaker.AddPopQuestion("Pop Question " + i);
