@@ -9,8 +9,7 @@ namespace UglyTrivia
     public class Game
     {
         private List<Player> players = new List<Player>();
-        // TODO-working-on: Move places into class Player
-        // TODO: Move purses into class Player
+        // TODO-working-on: Move purses into class Player
         private int[] purses = new int[6];
         // TODO: Move inPenaltyBox into class Player
         private bool[] inPenaltyBox = new bool[6];
@@ -111,7 +110,6 @@ namespace UglyTrivia
             }
         }
 
-        // TODO-working-on: Move method Game.currentCategory to class Player
 
         public bool wasCorrectlyAnswered()
         {
