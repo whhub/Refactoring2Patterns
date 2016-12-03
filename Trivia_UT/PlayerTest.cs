@@ -13,7 +13,8 @@ namespace Trivia_UT
             // Arrange
             var player = new Player("Chet");
 
-
+            // Act
+            player.MoveForwardSteps(1);
 
             // Assert
             Assert.AreEqual(1, player.Place);
