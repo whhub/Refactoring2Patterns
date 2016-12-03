@@ -9,9 +9,7 @@ namespace UglyTrivia
     public class Game
     {
         private List<Player> players = new List<Player>();
-        // TODO-working-on: Move purses into class Player
-        private int[] purses = new int[6];
-        // TODO: Move inPenaltyBox into class Player
+        // TODO-working-on: Move inPenaltyBox into class Player
         private bool[] inPenaltyBox = new bool[6];
 
         private int currentPlayer = 0;
@@ -34,7 +32,6 @@ namespace UglyTrivia
         public void add(String playerName)
         {
 
-            // TODO: Move playerName into class Player
             players.Add(new Player(playerName));
             inPenaltyBox[howManyPlayers()] = false;
 
