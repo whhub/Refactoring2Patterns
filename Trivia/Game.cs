@@ -15,6 +15,7 @@ namespace UglyTrivia
 
         public Game()
         {
+            // TODO: Magic number 50
             for (int i = 0; i < 50; i++)
             {
                 _questionMaker.AddPopQuestion("Pop Question " + i);
@@ -49,6 +50,7 @@ namespace UglyTrivia
 
             if (player.IsInPenaltyBox())
             {
+                // TODO:  Introduce explaning variable isRollingNumberOdd
                 if (rollingNumber % 2 != 0)
                 {
                     player.GetOutOfPenaltyBox();
