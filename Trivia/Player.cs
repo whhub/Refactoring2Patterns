@@ -83,5 +83,10 @@ namespace UglyTrivia
         {
             return _isGettingOutOfPenaltyBox;
         }
+
+        public void SentToPenaltyBox()
+        {
+            _isInPenaltyBox = true;
+        }
     }
 }
