@@ -8,7 +8,7 @@ namespace UglyTrivia
         private int _place;
         private int _sumOfGoldCoins;
         private bool _isInPenaltyBox;
-        // TODO-working-on: Eliminate field Player._isGettingOutOfPenaltyBox
+        // TODO; Write tests for class Player
 
         public static readonly int MaxNumberOfPlace = 12;
 
