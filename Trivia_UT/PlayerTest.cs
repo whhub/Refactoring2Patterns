@@ -37,16 +37,17 @@ namespace Trivia_UT
         {
             // Arrange
             var player = new Player("Chet");
-            
+            const string expected = "Pop";
+
             // Act, Assert
             player.MoveForwardSteps(12);
-            Assert.AreEqual("Pop", player.CurrentCategory());
+            Assert.AreEqual(expected, player.CurrentCategory());
 
             player.MoveForwardSteps(4);
-            Assert.AreEqual("Pop", player.CurrentCategory());
+            Assert.AreEqual(expected, player.CurrentCategory());
 
             player.MoveForwardSteps(8);
-            Assert.AreEqual("Pop", player.CurrentCategory());
+            Assert.AreEqual(expected, player.CurrentCategory());
         }
         // TODO: the category should be Pop if the player moves 1, 5 or 9 steps
         // TODO: the category should be Pop if the player moves 2, 6 or 10 steps
