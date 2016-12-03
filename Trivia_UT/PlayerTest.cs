@@ -49,7 +49,6 @@ namespace Trivia_UT
             player.MoveForwardSteps(4);
             Assert.AreEqual(expected, player.CurrentCategory());
         }
-        // TODO-working-on: the category should be Science if the player moves 1, 5 or 9 steps
         [TestMethod]
         public void The_category_should_be_Science_if_the_player_in_place_1_5_or_9()
         {
@@ -67,7 +66,39 @@ namespace Trivia_UT
             player.MoveForwardSteps(4);
             Assert.AreEqual(expected, player.CurrentCategory());
         }
-        // TODO: the category should be Sports if the player in place 2, 6 or 10 
-        // TODO: the category should be Rock if the player in place 3, 7 or 11 
+        [TestMethod]
+        public void The_category_should_be_Science_if_the_player_in_place_2_6_or_10()
+        {
+            // Arrange
+            var player = new Player("Chet");
+            const string expected = "Sports";
+
+            // Act, Assert
+            player.MoveForwardSteps(2);
+            Assert.AreEqual(expected, player.CurrentCategory());
+
+            player.MoveForwardSteps(4);
+            Assert.AreEqual(expected, player.CurrentCategory());
+
+            player.MoveForwardSteps(4);
+            Assert.AreEqual(expected, player.CurrentCategory());
+        }
+        [TestMethod]
+        public void The_category_should_be_Science_if_the_player_in_place_3_7_or_11()
+        {
+            // Arrange
+            var player = new Player("Chet");
+            const string expected = "Rock";
+
+            // Act, Assert
+            player.MoveForwardSteps(3);
+            Assert.AreEqual(expected, player.CurrentCategory());
+
+            player.MoveForwardSteps(4);
+            Assert.AreEqual(expected, player.CurrentCategory());
+
+            player.MoveForwardSteps(4);
+            Assert.AreEqual(expected, player.CurrentCategory());
+        }
     }
 }
