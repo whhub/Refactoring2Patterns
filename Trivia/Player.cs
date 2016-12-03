@@ -4,6 +4,7 @@ namespace UglyTrivia
     {
         private readonly string _name;
         private int _place;
+        private int _sumOfGoldCoins;
 
         public Player(string playerName)
         {
@@ -53,12 +54,12 @@ namespace UglyTrivia
 
         public void WinAGoldCoin()
         {
-            
+            _sumOfGoldCoins++;
         }
 
         public int CountGoldCoin()
         {
-            throw new System.NotImplementedException();
+            return _sumOfGoldCoins;
         }
     }
 }
