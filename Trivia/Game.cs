@@ -111,7 +111,7 @@ namespace UglyTrivia
             }
         }
 
-        // TODO: Move method Game.currentCategory to class QuestionMaker
+        // TODO: Move method Game.currentCategory to class Player
         private String currentCategory()
         {
             var place = players[currentPlayer].Place;
