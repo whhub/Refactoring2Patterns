@@ -112,9 +112,10 @@ namespace UglyTrivia
 
         public bool wasCorrectlyAnswered()
         {
-            if (inPenaltyBox[currentPlayer])
+            var player = players[currentPlayer];
+            if (inPenaltyBox[currentPlayer] || player.IsInPenaltyBox())
             {
-                if (isGettingOutOfPenaltyBox)
+                if (isGettingOutOfPenaltyBox || player.IsGettingOutOfPenaltyBox())
                 {
                     return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
                 }
