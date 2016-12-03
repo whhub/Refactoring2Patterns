@@ -40,11 +40,6 @@ namespace UglyTrivia
             Console.WriteLine("The total amount of players is " + players.Count);
         }
 
-        private int howManyPlayers()
-        {
-            return players.Count;
-        }
-
         public void roll(int rollingNumber)
         {
             var player = players[currentPlayer];
