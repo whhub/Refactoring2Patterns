@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trivia_UT", "Trivia_UT\Triv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TirePressureMonitoringSystem", "TirePressureMonitoringSystem\TirePressureMonitoringSystem.csproj", "{DF7109E6-3724-42F1-9DD5-DF993B51A8CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TirePressureMonitoringSystem_UT", "TirePressureMonitoringSystem_UT\TirePressureMonitoringSystem_UT.csproj", "{5859008E-6926-40E9-B989-D41A7C99D6C2}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Refactoring2Patterns.vsmdi
@@ -157,6 +159,16 @@ Global
 		{DF7109E6-3724-42F1-9DD5-DF993B51A8CE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{DF7109E6-3724-42F1-9DD5-DF993B51A8CE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{DF7109E6-3724-42F1-9DD5-DF993B51A8CE}.Release|x86.ActiveCfg = Release|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5859008E-6926-40E9-B989-D41A7C99D6C2}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -169,5 +181,6 @@ Global
 		{6873FAE2-259E-43DE-B73B-0D2DA7448B45} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
 		{26CFAD0F-DF1E-464F-BED0-CBD3A6D44815} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
 		{DF7109E6-3724-42F1-9DD5-DF993B51A8CE} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
+		{5859008E-6926-40E9-B989-D41A7C99D6C2} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
 	EndGlobalSection
 EndGlobal
