@@ -76,6 +76,5 @@ namespace Trivia_UT
             Assert.IsFalse(_isGameStillInProgress);
         }
 
-        // TODO-new-feature-working-on: The player will not be getting out of the penalty box when the rolling number is 4
     }
 }

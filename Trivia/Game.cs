@@ -24,7 +24,6 @@ namespace UglyTrivia
 
             players.Add(new Player(playerName));
 
-            // TODO-later: Replace Console.WriteLine with a log method of a logger
             Console.WriteLine(playerName + " was added");
             Console.WriteLine("The total amount of players is " + players.Count);
         }
@@ -89,7 +88,6 @@ namespace UglyTrivia
         }
 
 
-        // TODO-later: The name of method Game.wasCorrectlyAnswered() should be Game.AnsweredCorrectly()
         public bool wasCorrectlyAnswered()
         {
             var player = players[currentPlayer];
@@ -103,7 +101,6 @@ namespace UglyTrivia
             return theGameIsStillInProgress;
         }
 
-        // TODO-later: The name of method Game.wrongAnswer() shouble be Game.AnsweredWrong() 
         private bool currentPlayerGetsAGoldCoinAndSelectNextPlayer()
         {
             Console.WriteLine("Answer was correct!!!!");
@@ -136,7 +133,6 @@ namespace UglyTrivia
             currentPlayer++;
             if (currentPlayer == players.Count) currentPlayer = 0;
 
-            // TODO-later: The return value of method Game.wrongAnswer() is unnecessary and should be eliminated
             return true;
         }
 
