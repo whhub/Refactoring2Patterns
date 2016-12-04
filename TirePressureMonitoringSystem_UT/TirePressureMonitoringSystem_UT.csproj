@@ -48,6 +48,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AlarmTests.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TirePressureMonitoringSystem\TirePressureMonitoringSystem.csproj">
+      <Project>{DF7109E6-3724-42F1-9DD5-DF993B51A8CE}</Project>
+      <Name>TirePressureMonitoringSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
