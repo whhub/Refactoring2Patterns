@@ -83,6 +83,7 @@ namespace Ticket_UT
 
         public override int GetNextTurnNumber()
         {
+            _callsCount++;
             return _nextTurnNumber;
         }
 
