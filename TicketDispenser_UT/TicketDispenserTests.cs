@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Ticket;
 
-namespace TicketDispenser_UT
+namespace Ticket_UT
 {
     [TestClass]
     public class TicketDispenserTests
@@ -9,7 +10,18 @@ namespace TicketDispenser_UT
 
         // TODO-new-feature: the turn number sequence of the regular customers starts from 2001
         
-        // TODO-user-intent-test: a new ticket should have the turn number subsequent to the previous ticket
+        // TODO-user-intent-test-Working-on: a new ticket should have the turn number subsequent to the previous ticket
+        [TestMethod]
+        public void A_new_ticket_should_have_the_turn_number_subsequent_to_the_previous_ticket()
+        {
+            // Arrange
+            var ticketDispenser = new TicketDispenser();
+            TurnTicket previouseTicket = ticketDispenser.GetTurnTicket();
+            // Assert
+            TurnTicket newTicket = ticketDispenser.GetTurnTicket();
+
+            Assert.AreEqual(1, newTicket.TurnNumber - previouseTicket.TurnNumber);
+        }
 
         // TODO-user-intent-test: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
 

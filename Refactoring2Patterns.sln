@@ -36,9 +36,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TirePressureMonitoringSyste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TirePressureMonitoringSystem_UT", "TirePressureMonitoringSystem_UT\TirePressureMonitoringSystem_UT.csproj", "{5859008E-6926-40E9-B989-D41A7C99D6C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketDispenser", "TicketDispenser\TicketDispenser.csproj", "{F3B02762-1F8F-4F5B-8FDB-95AA3DEFFEBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket", "TicketDispenser\Ticket.csproj", "{F3B02762-1F8F-4F5B-8FDB-95AA3DEFFEBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketDispenser_UT", "TicketDispenser_UT\TicketDispenser_UT.csproj", "{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket_UT", "TicketDispenser_UT\Ticket_UT.csproj", "{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution

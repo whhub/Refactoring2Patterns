@@ -1,4 +1,4 @@
-namespace TicketDispenser
+namespace Ticket
 {
     public class TurnTicket
     {
