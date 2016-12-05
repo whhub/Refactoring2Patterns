@@ -13,10 +13,10 @@ namespace TirePressureMonitoringSystem_UT
         {
             // Arrange
             StubSensor stubSensor = new StubSensor();
-            stubSensor.ArrangeNextPressurePsiValue(Alarm.LowPressureThreshold);
             Alarm alarm = new Alarm(stubSensor);
 
             // Act
+            stubSensor.ArrangeNextPressurePsiValue(Alarm.LowPressureThreshold);
             alarm.Check();
 
             // Assert
@@ -28,10 +28,10 @@ namespace TirePressureMonitoringSystem_UT
         {
             // Arrange
             StubSensor stubSensor = new StubSensor();
-            stubSensor.ArrangeNextPressurePsiValue(Alarm.HighPressureThreshold + 1);
             Alarm alarm = new Alarm(stubSensor);
 
             // Act
+            stubSensor.ArrangeNextPressurePsiValue(Alarm.HighPressureThreshold + 1);
             alarm.Check();
 
             // Assert
@@ -41,7 +41,16 @@ namespace TirePressureMonitoringSystem_UT
         [TestMethod]
         public void A_normal_pressure_value_after_a_value_outside_the_range_should_not_stop_the_alarm()
         {
-            
+            // Arrange
+            StubSensor stubSensor = new StubSensor();
+            Alarm alarm = new Alarm(stubSensor);
+
+            // Act
+            stubSensor.ArrangeNextPressurePsiValue(Alarm.LowPressureThreshold - 1);
+            alarm.Check();
+            stubSensor.ArrangeNextPressurePsiValue(Alarm.LowPressureThreshold);
+            alarm.Check();
+
             // Assert
             Assert.IsTrue(alarm.AlarmOn);
         }
