@@ -10,7 +10,6 @@ namespace Ticket_UT
 
         // TODO-new-feature: the turn number sequence of the regular customers starts from 2001
         
-        // TODO-user-intent-test-Working-on: a new ticket should have the turn number subsequent to the previous ticket
         [TestMethod]
         public void A_new_ticket_should_have_the_turn_number_subsequent_to_the_previous_ticket()
         {
@@ -23,8 +22,13 @@ namespace Ticket_UT
             Assert.AreEqual(1, newTicket.TurnNumber - previouseTicket.TurnNumber);
         }
 
-        // TODO-user-intent-test: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
-
+        // TODO-user-intent-test-working-on: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
+        [TestMethod]
+        public void A_new_ticket_should_have_the_turn_number_subsequent_to_the_previous_ticket_from_another_dispenser()
+        {
+            // Assert
+            Assert.AreEqual(1, newTicket.TurnNumber - previouseTicket.TurnNumber);
+        }
         // TODO-unit-test: the ticket dispenser shouble dispense the ticket number 11 if give a turn number 11 to it
 
     }
