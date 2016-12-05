@@ -14,7 +14,7 @@ namespace TirePressureMonitoringSystem_UT
         public void A_normal_pressure_value_should_not_raise_the_alarm()
         {
             // Arrange
-            Alarm alarm = new Alarm();
+            Alarm alarm = new Alarm(stubSensor);
             
             // Act
             alarm.Check(); 
