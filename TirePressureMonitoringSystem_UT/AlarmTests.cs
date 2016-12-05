@@ -15,7 +15,7 @@ namespace TirePressureMonitoringSystem_UT
         public void A_normal_pressure_value_should_not_raise_the_alarm()
         {
             // Arrange
-            
+            _alarm.Check(); 
 
             // Assert
             Assert.IsFalse(_alarm.AlarmOn);
