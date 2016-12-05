@@ -12,6 +12,11 @@ namespace TextConverter
             _fullFilenameWithPath = fullFilenameWithPath;
         }
 
+        public UnicodeFileToHtmTextConverter(TextReader reader)
+        {
+
+        }
+
         public string ConvertToHtml()
         {
             // TODO: Depending on the file system violates the Dependency Inversion Principle and Open-closed Principle.
