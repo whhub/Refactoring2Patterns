@@ -21,7 +21,6 @@ namespace Ticket_UT
             Assert.AreEqual(TurnNumberSequence.VIPCustomerFirstNumber, ticket.TurnNumber);
         }
 
-        // TODO-new-feature-working-on: the turn number sequence of the regular customers starts from 2001
         [TestMethod]
         public void The_turn_number_sequence_of_the_regular_customers_starts_from_2001()
         {
