@@ -9,7 +9,6 @@ namespace Textconverter_UT
     {
         // TODO-new-feature: Make the UnicodeFileToHtmTextConverter working for not only a file but also a string
 
-        // TODO-user-intent-test-working-on: should convert ampersand
         [TestMethod]
         public void Should_covert_ampersand()
         {
@@ -21,7 +20,16 @@ namespace Textconverter_UT
         }
 
         // TODO-user-intent-test: should convert greater than and less than
-        
+        [TestMethod]
+        public void Should_convert_greater_than_and_less_than()
+        {
+            // Arrange
+            var converter = new UnicodeFileToHtmTextConverter(new StringReader(">_<|||"));
+            
+            // Act & Assert
+            Assert.AreEqual("&gt;_&lt;|||<br />", converter.ConvertToHtml());
+        }
+
         // TODO-user-intent-test: should add a line break for a new line
 
     }
