@@ -7,6 +7,11 @@ namespace Ticket
             throw new System.NotImplementedException();
         }
 
+        public TicketDispenser() : this(new TurnNumberSequence())
+        {
+            throw new System.NotImplementedException();
+        }
+
         public TurnTicket GetTurnTicket()
         {
             // TODO: Depending on a static method violates the Dependency Inversion Priciple and Open-Closed Principle.
