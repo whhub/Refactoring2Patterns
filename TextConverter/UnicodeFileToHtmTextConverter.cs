@@ -14,6 +14,7 @@ namespace TextConverter
 
         public string ConvertToHtml()
         {
+            // TODO: Depending on the file system violates the Dependency Inversion Principle and Open-closed Principle.
             var reader = new StreamReader(new FileStream(_fullFilenameWithPath, FileMode.Open));
 
             var html = string.Empty;
