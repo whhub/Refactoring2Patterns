@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TirePressureMonitoringSyste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketDispenser", "TicketDispenser\TicketDispenser.csproj", "{F3B02762-1F8F-4F5B-8FDB-95AA3DEFFEBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketDispenser_UT", "TicketDispenser_UT\TicketDispenser_UT.csproj", "{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Refactoring2Patterns.vsmdi
@@ -181,6 +183,16 @@ Global
 		{F3B02762-1F8F-4F5B-8FDB-95AA3DEFFEBD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F3B02762-1F8F-4F5B-8FDB-95AA3DEFFEBD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F3B02762-1F8F-4F5B-8FDB-95AA3DEFFEBD}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -195,5 +207,6 @@ Global
 		{DF7109E6-3724-42F1-9DD5-DF993B51A8CE} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
 		{5859008E-6926-40E9-B989-D41A7C99D6C2} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
 		{F3B02762-1F8F-4F5B-8FDB-95AA3DEFFEBD} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
+		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958} = {1CDE7E81-7F42-4FA5-909D-AF67D3B2E667}
 	EndGlobalSection
 EndGlobal
