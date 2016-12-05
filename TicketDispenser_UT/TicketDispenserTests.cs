@@ -57,7 +57,7 @@ namespace Ticket_UT
 
     }
 
-    public class MockTurnNumberSequence
+    public class MockTurnNumberSequence : TurnNumberSequence
     {
         public void ArrangeNextTurnNumber(int nextTurnNumber)
         {
