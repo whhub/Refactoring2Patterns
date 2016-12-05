@@ -2,7 +2,7 @@ using System;
 
 namespace TirePressureMonitoringSystem
 {
-    public class Sensor
+    public class Sensor : Transducer
     {
         //
         // The reading of the pressure value from the sensor is simulated in this implementation.
