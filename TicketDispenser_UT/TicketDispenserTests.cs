@@ -59,8 +59,11 @@ namespace Ticket_UT
 
     public class MockTurnNumberSequence : TurnNumberSequence
     {
+        private int _nextTurnNumber;
+
         public void ArrangeNextTurnNumber(int nextTurnNumber)
         {
+            _nextTurnNumber = nextTurnNumber;
         }
 
         public void VerifyMethodGetNextTurnNumberCalledOnce()
