@@ -2,8 +2,11 @@ namespace Ticket
 {
     public class TicketDispenser
     {
+        private TurnNumberSequence _turnNumberSequence;
+
         public TicketDispenser(TurnNumberSequence turnNumberSequence)
         {
+            _turnNumberSequence = turnNumberSequence;
         }
 
         public TicketDispenser() : this(new TurnNumberSequence())
