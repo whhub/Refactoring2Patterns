@@ -19,7 +19,6 @@ namespace Textconverter_UT
             Assert.AreEqual("H&amp;M<br />", converter.ConvertToHtml());
         }
 
-        // TODO-user-intent-test: should convert greater than and less than
         [TestMethod]
         public void Should_convert_greater_than_and_less_than()
         {
@@ -30,7 +29,15 @@ namespace Textconverter_UT
             Assert.AreEqual("&gt;_&lt;|||<br />", converter.ConvertToHtml());
         }
 
-        // TODO-user-intent-test: should add a line break for a new line
+        [TestMethod]
+        public void Should_add_a_line_break_for_a_new_line()
+        {
+            // Arrange
+            var converter = new UnicodeFileToHtmTextConverter(new StringReader("Cheers\nBen Wu"));
+
+            // Act & Assert
+            Assert.AreEqual("Cheers<br />Ben Wu<br />", converter.ConvertToHtml());
+        }
 
     }
 }
