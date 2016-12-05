@@ -4,7 +4,7 @@ namespace Ticket
     {
         private static int _turnNumber;
 
-        public static int GetNextTurnNumber()
+        public int GetNextTurnNumber()
         {
             return _turnNumber++;
         }
