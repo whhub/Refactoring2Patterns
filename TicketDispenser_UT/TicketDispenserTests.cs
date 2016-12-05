@@ -39,7 +39,14 @@ namespace Ticket_UT
             // Assert
             Assert.AreEqual(1, newTicket.TurnNumber - previouseTicket.TurnNumber);
         }
-        // TODO-unit-test: the ticket dispenser shouble dispense the ticket number 11 if give a turn number 11 to it
+        // TODO-unit-test-working-on: the ticket dispenser should dispense the ticket number 11 if give a turn number 11 to it
+        [TestMethod]
+        public void The_ticket_dispenser_should_dispense_the_ticket_number_11_if_give_a_turn_number_11_to_it()
+        {
+            
+            // Assert
+            Assert.AreEqual(11, ticket.TurnNumber);
+        }
 
     }
 }
