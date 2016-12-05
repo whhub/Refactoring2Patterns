@@ -56,4 +56,8 @@ namespace Ticket_UT
         }
 
     }
+
+    public class MockTurnNumberSequence
+    {
+    }
 }
