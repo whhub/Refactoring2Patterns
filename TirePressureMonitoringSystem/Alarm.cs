@@ -5,9 +5,13 @@ namespace TirePressureMonitoringSystem
         public const double LowPressureThreshold = 17;
         private const double HighPressureThreshold = 21;
         // TODO: Depending on a concrete Sensor violates the Dependency Inversion Principle and Open-Closed Principle
-        private readonly Sensor _sensor = new Sensor();
+        private readonly Sensor _sensor ;
 
-        // TODO: Retain the original interface for the default constructor of Alarm
+        public Alarm()
+        {
+            _sensor = new Sensor();
+        }
+
         public Alarm(Transducer transducer)
         {
 
