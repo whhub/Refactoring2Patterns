@@ -10,7 +10,13 @@ namespace Ticket_UT
         [TestMethod]
         public void The_turn_number_sequence_of_the_vip_customers_starts_from_1001()
         {
-            
+            // Arrange
+            TurnNumberSequence vipCustomerTurnNumberSequence = new TurnNumberSequence(1001);
+            TicketDispenser ticketDispenser = new TicketDispenser(vipCustomerTurnNumberSequence);
+
+            // Act
+            TurnTicket ticket = ticketDispenser.GetTurnTicket();
+
             // Assert
             Assert.AreEqual(1001, ticket.TurnNumber);
         }
@@ -81,6 +87,7 @@ namespace Ticket_UT
 
         #endregion
 
+        // TODO: Finish the implementation of method MockTurnNumberSequence.VerifyMethodGetNextTrunNumberCalledOnce()
         public void VerifyMethodGetNextTurnNumberCalledOnce()
         {
         }
