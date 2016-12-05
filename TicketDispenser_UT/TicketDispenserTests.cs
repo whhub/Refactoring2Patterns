@@ -24,7 +24,6 @@ namespace Ticket_UT
             Assert.AreEqual(1, newTicket.TurnNumber - previouseTicket.TurnNumber);
         }
 
-        // TODO-user-intent-test-working-on: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
         [TestMethod]
         public void A_new_ticket_should_have_the_turn_number_subsequent_to_the_previous_ticket_from_another_dispenser()
         {
@@ -43,9 +42,17 @@ namespace Ticket_UT
         [TestMethod]
         public void The_ticket_dispenser_should_dispense_the_ticket_number_11_if_give_a_turn_number_11_to_it()
         {
-            
+            // Arrange
+            MockTurnNumberSequence mockTurnNumberSequence = new MockTurnNumberSequence();
+            mockTurnNumberSequence.ArrangeNextTurnNumber(11);
+            TicketDispenser ticketDispenser = new TicketDispenser(mockTurnNumberSequence);
+
+            // Act
+            TurnTicket ticket = ticketDispenser.GetTurnTicket();
+
             // Assert
             Assert.AreEqual(11, ticket.TurnNumber);
+            mockTurnNumberSequence.VerifyMethodGetNextTurnNumberCalledOnce();
         }
 
     }
