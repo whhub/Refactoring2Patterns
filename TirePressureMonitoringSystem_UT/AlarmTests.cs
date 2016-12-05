@@ -14,6 +14,7 @@ namespace TirePressureMonitoringSystem_UT
         public void A_normal_pressure_value_should_not_raise_the_alarm()
         {
             // Arrange
+            StubSensor stubSensor = new StubSensor();
             stubSensor.ArrangeNextPressurePsiValue(Alarm.LowPressureThreshold);
             Alarm alarm = new Alarm(stubSensor);
             
@@ -23,5 +24,9 @@ namespace TirePressureMonitoringSystem_UT
             // Assert
             Assert.IsFalse(alarm.AlarmOn);
         }
+    }
+
+    public class StubSensor
+    {
     }
 }
