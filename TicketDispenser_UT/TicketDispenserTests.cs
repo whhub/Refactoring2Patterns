@@ -59,5 +59,9 @@ namespace Ticket_UT
 
     public class MockTurnNumberSequence
     {
+        public void ArrangeNextTurnNumber(int nextTurnNumber)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
