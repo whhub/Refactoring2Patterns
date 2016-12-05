@@ -11,14 +11,14 @@ namespace Ticket_UT
         public void The_turn_number_sequence_of_the_vip_customers_starts_from_1001()
         {
             // Arrange
-            TurnNumberSequence vipCustomerTurnNumberSequence = new TurnNumberSequence(1001);
+            TurnNumberSequence vipCustomerTurnNumberSequence = new TurnNumberSequence(TurnNumberSequence.VIPCustomerFirstNumber);
             TicketDispenser ticketDispenser = new TicketDispenser(vipCustomerTurnNumberSequence);
 
             // Act
             TurnTicket ticket = ticketDispenser.GetTurnTicket();
 
             // Assert
-            Assert.AreEqual(1001, ticket.TurnNumber);
+            Assert.AreEqual(TurnNumberSequence.VIPCustomerFirstNumber, ticket.TurnNumber);
         }
 
         // TODO-new-feature-working-on: the turn number sequence of the regular customers starts from 2001
@@ -34,7 +34,7 @@ namespace Ticket_UT
             TurnTicket ticket = ticketDispenser.GetTurnTicket();
 
             // Assert
-            Assert.AreEqual(2001, ticket.TurnNumber);
+            Assert.AreEqual(TurnNumberSequence.RegularCustomerFirstNumber, ticket.TurnNumber);
         }
         
         [TestMethod]

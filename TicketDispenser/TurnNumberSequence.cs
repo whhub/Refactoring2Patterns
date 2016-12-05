@@ -17,5 +17,8 @@ namespace Ticket
         {
             return _turnNumber++;
         }
+
+        public const int VIPCustomerFirstNumber = 1001;
+        public const int RegularCustomerFirstNumber = 2001;
     }
 }
