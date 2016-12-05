@@ -12,12 +12,16 @@ namespace TirePressureMonitoringSystem
         private const double Offset = 16;
         private readonly Random _randomPressureSampleSimulator = new Random();
 
+        #region [--Implement from Transducer--]
+
         public double PopNextPressurePsiValue()
         {
             var pressureTelemetryValue = ReadPressureSample();
 
             return Offset + pressureTelemetryValue;
         }
+
+        #endregion
 
         private double ReadPressureSample()
         {
