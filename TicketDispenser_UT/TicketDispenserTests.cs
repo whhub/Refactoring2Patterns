@@ -6,7 +6,7 @@ namespace Ticket_UT
     [TestClass]
     public class TicketDispenserTests
     {
-        // TODO-new-feature: the turn number sequence of the vip customers starts from 1001
+        // TODO-new-feature-Working-on: the turn number sequence of the vip customers starts from 1001
 
         // TODO-new-feature: the turn number sequence of the regular customers starts from 2001
         
@@ -38,7 +38,6 @@ namespace Ticket_UT
             // Assert
             Assert.AreEqual(1, newTicket.TurnNumber - previouseTicket.TurnNumber);
         }
-        // TODO-unit-test-working-on: the ticket dispenser should dispense the ticket number 11 if give a turn number 11 to it
         [TestMethod]
         public void The_ticket_dispenser_should_dispense_the_ticket_number_11_if_give_a_turn_number_11_to_it()
         {
@@ -65,6 +64,15 @@ namespace Ticket_UT
         {
             _nextTurnNumber = nextTurnNumber;
         }
+
+        #region Overrides of TurnNumberSequence
+
+        public override int GetNextTurnNumber()
+        {
+            return _nextTurnNumber;
+        }
+
+        #endregion
 
         public void VerifyMethodGetNextTurnNumberCalledOnce()
         {
