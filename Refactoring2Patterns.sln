@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket", "TicketDispenser\T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket_UT", "TicketDispenser_UT\Ticket_UT.csproj", "{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextConverter", "TextConverter\TextConverter.csproj", "{DD0817F8-EE21-44FD-9116-27D91E2DD679}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Refactoring2Patterns.vsmdi
@@ -193,6 +195,16 @@ Global
 		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{6E2EEC1A-6D97-44B3-86C0-97ADB9677958}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DD0817F8-EE21-44FD-9116-27D91E2DD679}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
