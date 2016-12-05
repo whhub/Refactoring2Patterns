@@ -9,6 +9,10 @@ namespace Ticket
             _turnNumber = firstNumber;
         }
 
+        public TurnNumberSequence() : this(0)
+        {
+        }
+
         public virtual int GetNextTurnNumber()
         {
             return _turnNumber++;
