@@ -7,6 +7,13 @@ namespace Ticket_UT
     public class TicketDispenserTests
     {
         // TODO-new-feature-Working-on: the turn number sequence of the vip customers starts from 1001
+        [TestMethod]
+        public void The_turn_number_sequence_of_the_vip_customers_starts_from_1001()
+        {
+            
+            // Assert
+            Assert.AreEqual(1001, ticket.TurnNumber);
+        }
 
         // TODO-new-feature: the turn number sequence of the regular customers starts from 2001
         
