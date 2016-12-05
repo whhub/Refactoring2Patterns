@@ -61,7 +61,10 @@ namespace Ticket_UT
     {
         public void ArrangeNextTurnNumber(int nextTurnNumber)
         {
-            throw new System.NotImplementedException();
+        }
+
+        public void VerifyMethodGetNextTurnNumberCalledOnce()
+        {
         }
     }
 }
