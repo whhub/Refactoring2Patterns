@@ -10,6 +10,7 @@ namespace Textconverter_UT
         // TODO-new-feature: Make the UnicodeFileToHtmTextConverter working for not only a file but also a string
 
         // TODO-user-intent-test-working-on: should convert ampersand
+        [TestMethod]
         public void Should_covert_ampersand()
         {
             // Arrange
