@@ -26,11 +26,11 @@ namespace TirePressureMonitoringSystem_UT
         }
     }
 
-    public class StubSensor
+    public class StubSensor : Transducer
     {
         public void ArrangeNextPressurePsiValue(double lowPressureThreshold)
         {
-            throw new System.NotImplementedException();
+
         }
     }
 }

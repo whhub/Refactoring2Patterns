@@ -9,7 +9,7 @@ namespace TirePressureMonitoringSystem
 
         public Alarm(Transducer transducer)
         {
-            throw new System.NotImplementedException();
+
         }
 
         public bool AlarmOn { get; private set; }
