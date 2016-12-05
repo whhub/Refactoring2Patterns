@@ -28,9 +28,20 @@ namespace TirePressureMonitoringSystem_UT
 
     public class StubSensor : Transducer
     {
-        public void ArrangeNextPressurePsiValue(double lowPressureThreshold)
-        {
+        private double _nextPressurePsiValue;
 
+        public void ArrangeNextPressurePsiValue(double nextPressureThreshold)
+        {
+            _nextPressurePsiValue = nextPressureThreshold;
         }
+
+        #region Implementation of Transducer
+
+        public double PopNextPressurePsiValue()
+        {
+            return _nextPressurePsiValue;
+        }
+
+        #endregion
     }
 }
