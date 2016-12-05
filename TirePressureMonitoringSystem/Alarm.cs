@@ -7,6 +7,7 @@ namespace TirePressureMonitoringSystem
         // TODO: Depending on a concrete Sensor violates the Dependency Inversion Principle and Open-Closed Principle
         private readonly Sensor _sensor = new Sensor();
 
+        // TODO: Retain the original interface for the default constructor of Alarm
         public Alarm(Transducer transducer)
         {
 
