@@ -6,8 +6,7 @@ namespace TirePressureMonitoringSystem_UT
     [TestClass]
     public class AlarmTests
     {
-        // TODO-new-feature: a normal pressure value after a value outside the range should stop the alarm
-        // TODO-user-intent-test-Working-on: a normal pressure value after a value outside the range should not stop the alarm
+        // TODO-new-feature-working-on: a normal pressure value after a value outside the range should stop the alarm
         [TestMethod]
         public void A_normal_pressure_value_should_not_raise_the_alarm()
         {
@@ -39,7 +38,7 @@ namespace TirePressureMonitoringSystem_UT
         }
 
         [TestMethod]
-        public void A_normal_pressure_value_after_a_value_outside_the_range_should_not_stop_the_alarm()
+        public void A_normal_pressure_value_after_a_value_outside_the_range_should_stop_the_alarm()
         {
             // Arrange
             StubSensor stubSensor = new StubSensor();
@@ -52,7 +51,7 @@ namespace TirePressureMonitoringSystem_UT
             alarm.Check();
 
             // Assert
-            Assert.IsTrue(alarm.AlarmOn);
+            Assert.IsFalse(alarm.AlarmOn);
         }
     }
 

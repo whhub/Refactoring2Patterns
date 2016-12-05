@@ -20,8 +20,11 @@ namespace TirePressureMonitoringSystem
 
         public void Check()
         {
-            var psiPressureValue = _transducer.PopNextPressurePsiValue();
 
+            AlarmOn = false;
+
+            var psiPressureValue = _transducer.PopNextPressurePsiValue();
+            
             if (psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue)
             {
                 AlarmOn = true;
