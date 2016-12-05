@@ -21,7 +21,21 @@ namespace Ticket_UT
             Assert.AreEqual(1001, ticket.TurnNumber);
         }
 
-        // TODO-new-feature: the turn number sequence of the regular customers starts from 2001
+        // TODO-new-feature-working-on: the turn number sequence of the regular customers starts from 2001
+        [TestMethod]
+        public void The_turn_number_sequence_of_the_regular_customers_starts_from_2001()
+        {
+            
+            // Arrange
+            TurnNumberSequence regularCustomerTurnNumberSequence = new TurnNumberSequence(2001);
+            TicketDispenser ticketDispenser = new TicketDispenser(regularCustomerTurnNumberSequence);
+
+            // Act
+            TurnTicket ticket = ticketDispenser.GetTurnTicket();
+
+            // Assert
+            Assert.AreEqual(2001, ticket.TurnNumber);
+        }
         
         [TestMethod]
         public void A_new_ticket_should_have_the_turn_number_subsequent_to_the_previous_ticket()
@@ -89,7 +103,6 @@ namespace Ticket_UT
 
         #endregion
 
-        // TODO-working-on: Finish the implementation of method MockTurnNumberSequence.VerifyMethodGetNextTrunNumberCalledOnce()
         public void VerifyMethodGetNextTurnNumberCalledOnce()
         {
             if (_callsCount != 1)
