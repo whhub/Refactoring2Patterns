@@ -5,12 +5,11 @@ namespace TextConverter
 {
     public class UnicodeFileToHtmTextConverter
     {
-        private readonly string _fullFilenameWithPath;
         private TextReader _reader;
 
         public UnicodeFileToHtmTextConverter(string fullFilenameWithPath)
         {
-            _fullFilenameWithPath = fullFilenameWithPath;
+            _reader = new StreamReader(new FileStream(fullFilenameWithPath, FileMode.Open));
         }
 
         public UnicodeFileToHtmTextConverter(TextReader reader)
