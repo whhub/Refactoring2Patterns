@@ -2,6 +2,10 @@ namespace Ticket
 {
     public class TicketDispenser
     {
+        public TicketDispenser(TurnNumberSequence turnNumberSequence)
+        {
+            throw new System.NotImplementedException();
+        }
 
         public TurnTicket GetTurnTicket()
         {
