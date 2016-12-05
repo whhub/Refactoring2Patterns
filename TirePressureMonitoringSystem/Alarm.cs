@@ -6,6 +6,12 @@ namespace TirePressureMonitoringSystem
         private const double HighPressureThreshold = 21;
         // TODO: Depending on a concrete Sensor violates the Dependency Inversion Principle and Open-Closed Principle
         private readonly Sensor _sensor = new Sensor();
+
+        public Alarm(Transducer transducer)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public bool AlarmOn { get; private set; }
 
         public void Check()
