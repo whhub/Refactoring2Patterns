@@ -16,9 +16,11 @@ namespace Ticket_UT
             // Arrange
             var ticketDispenser = new TicketDispenser();
             TurnTicket previouseTicket = ticketDispenser.GetTurnTicket();
-            // Assert
+
+            // Act
             TurnTicket newTicket = ticketDispenser.GetTurnTicket();
 
+            // Assert
             Assert.AreEqual(1, newTicket.TurnNumber - previouseTicket.TurnNumber);
         }
 
@@ -26,6 +28,14 @@ namespace Ticket_UT
         [TestMethod]
         public void A_new_ticket_should_have_the_turn_number_subsequent_to_the_previous_ticket_from_another_dispenser()
         {
+            // Arrange
+            var ticketDispenser = new TicketDispenser();
+            var anotherTicketDispenser = new TicketDispenser();
+
+            // Act
+            TurnTicket previouseTicket = ticketDispenser.GetTurnTicket();
+            TurnTicket newTicket = anotherTicketDispenser.GetTurnTicket();
+
             // Assert
             Assert.AreEqual(1, newTicket.TurnNumber - previouseTicket.TurnNumber);
         }
