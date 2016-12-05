@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TextConverter;
 
 namespace Textconverter_UT
 {
@@ -10,8 +12,10 @@ namespace Textconverter_UT
         // TODO-user-intent-test-working-on: should convert ampersand
         public void Should_covert_ampersand()
         {
+            // Arrange
+            var converter = new UnicodeFileToHtmTextConverter(new StringReader("H&M"));
             
-            // Assert
+            // Act & Assert
             Assert.AreEqual("", convert.ConvertToHtml());
         }
 
