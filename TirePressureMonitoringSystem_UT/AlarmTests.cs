@@ -28,5 +28,9 @@ namespace TirePressureMonitoringSystem_UT
 
     public class StubSensor
     {
+        public void ArrangeNextPressurePsiValue(double lowPressureThreshold)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
