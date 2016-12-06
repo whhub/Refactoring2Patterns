@@ -7,7 +7,6 @@ namespace Textconverter_UT
     [TestClass]
     public class UnicodeFileToHtmTextConverterTests
     {
-        // TODO-new-feature: Make the UnicodeFileToHtmTextConverter working for not only a file but also a string
 
         [TestMethod]
         public void Should_covert_ampersand()
