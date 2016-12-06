@@ -19,21 +19,38 @@ namespace Textconverter_UT
         }
 
         [TestMethod]
+<<<<<<< HEAD
         public void Should_convert_greater_than_and_less_than()
         {
             // Arrange
             var converter = new UnicodeFileToHtmTextConverter(new StringReader(">_<|||"));
+            
+=======
+        public void Should_covert_greater_than_and_less_than()
+        {
+            // Arrange
+            var converter = new UnicodeFileToHtmTextConverter(new StringReader(">_<|||"));
 
+>>>>>>> 788f2ed81c1fd4aae9cfc25a6de0f6177d96213f
             // Act & Assert
             Assert.AreEqual("&gt;_&lt;|||<br />", converter.ConvertToHtml());
         }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 788f2ed81c1fd4aae9cfc25a6de0f6177d96213f
         [TestMethod]
         public void Should_add_a_line_break_for_a_new_line()
         {
             // Arrange
             var converter = new UnicodeFileToHtmTextConverter(new StringReader("Cheers\nBen Wu"));
+<<<<<<< HEAD
+
+            // Act & Assert
+            Assert.AreEqual("Cheers<br />Ben Wu<br />", converter.ConvertToHtml());
+        }
+=======
             
             // Act & Assert
             Assert.AreEqual("Cheers<br />Ben Wu<br />", converter.ConvertToHtml());
@@ -49,6 +66,7 @@ namespace Textconverter_UT
             // Act & Assert
             Assert.AreEqual("H&amp;M<br />", converter.ConvertToHtml());
         }
+>>>>>>> 788f2ed81c1fd4aae9cfc25a6de0f6177d96213f
 
     }
 }
