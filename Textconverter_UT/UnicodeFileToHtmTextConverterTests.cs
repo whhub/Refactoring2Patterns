@@ -17,7 +17,7 @@ namespace Textconverter_UT
             var converter = new UnicodeFileToHtmTextConverter(new StringReader("H&M"));
             
             // Act & Assert
-            Assert.AreEqual("", converter.ConvertToHtml());
+            Assert.AreEqual("H&amp;M<br />", converter.ConvertToHtml());
         }
 
         // TODO-user-intent-test: should convert greater than and less than

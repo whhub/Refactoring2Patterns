@@ -5,32 +5,29 @@ namespace TextConverter
 {
     public class UnicodeFileToHtmTextConverter
     {
-        private readonly string _fullFilenameWithPath;
+        private TextReader _reader;
 
         public UnicodeFileToHtmTextConverter(string fullFilenameWithPath)
         {
-            _fullFilenameWithPath = fullFilenameWithPath;
+            _reader = new StreamReader(new FileStream(fullFilenameWithPath, FileMode.Open));
         }
 
         public UnicodeFileToHtmTextConverter(TextReader reader)
         {
-
+            _reader = reader;
         }
 
         public string ConvertToHtml()
         {
-            // TODO: Depending on the file system violates the Dependency Inversion Principle and Open-closed Principle.
-            var reader = new StreamReader(new FileStream(_fullFilenameWithPath, FileMode.Open));
-
             var html = string.Empty;
 
-            var line = reader.ReadLine();
+            var line = _reader.ReadLine();
             while (line != null)
             {
                 // TODO: Depending on the third party library violates the Dependency Inversion Principle and Open-Closed Principle.
                 html += HttpUtility.HtmlEncode(line);
                 html += "<br />";
-                line = reader.ReadLine();
+                line = _reader.ReadLine();
             }
 
             return html;
