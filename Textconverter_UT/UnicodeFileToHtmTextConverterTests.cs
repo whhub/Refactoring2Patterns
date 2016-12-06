@@ -40,6 +40,16 @@ namespace Textconverter_UT
             Assert.AreEqual("Cheers<br />Ben Wu<br />", converter.ConvertToHtml());
         }
 
+        [TestMethod]
+        public void Should_convert_ampersand_using_StringEscape()
+        {
+            // Arrange
+            var stringEscaper = new StringEscaper();
+            var converter = new UnicodeFileToHtmTextConverter(new StringReader("H&M"), stringEscaper);
+
+            // Act & Assert
+            Assert.AreEqual("H&amp;M<br />", converter.ConvertToHtml());
+        }
 
     }
 }

@@ -24,8 +24,8 @@ namespace TextConverter
             var line = _reader.ReadLine();
             while (line != null)
             {
-                // TODO: Depending on the third party library violates the Dependency Inversion Principle and Open-Closed Principle.
-                html += HttpUtility.HtmlEncode(line);
+                // TODO-working-on: Depending on the third party library violates the Dependency Inversion Principle and Open-Closed Principle
+                html += _stringEscapter.EscapeHtml(line);
                 html += "<br />";
                 line = _reader.ReadLine();
             }
