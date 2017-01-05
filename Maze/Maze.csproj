@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Door.cs" />
     <Compile Include="Maze.cs" />
+    <Compile Include="MazeGame.cs" />
     <Compile Include="Wall.cs" />
     <Compile Include="Directions.cs" />
     <Compile Include="MapSite.cs" />
